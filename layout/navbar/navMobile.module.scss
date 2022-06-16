@@ -1,0 +1,122 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colors";
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+// Mobile Nav Menu Toggle Button
+.navToggleButton {
+  color: white;
+  cursor: pointer;
+}
+
+// Logo
+.logo {
+  max-width: 120px;
+}
+
+// Search Icon + Dropdown
+.searchIconWrapper {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .searchIcon {
+    color: white;
+  }
+}
+.searchDropdown {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  margin-left: -15px;
+  background-color: $red;
+  height: 60px;
+  padding: 10px;
+  transform: translateY(-45px);
+  transition: transform 600ms;
+}
+.showSearchDropdown {
+  position: absolute;
+  z-index: -10;
+  transition: transform 600ms;
+  transform: translateY(15px);
+  width: 100%;
+  margin-left: -15px;
+  background-color: $red;
+  height: 60px;
+  padding: 10px;
+}
+.searchLabel {
+  position: relative;
+}
+.searchInput {
+  background-color: white;
+  height: 40px;
+  max-width: 640px;
+  min-width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 0 10px 0 35px;
+  color: $copyColor;
+}
+.inputSearchIcon {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+// Mobile Navigation
+.mobileNav {
+  position: absolute;
+  left: 0;
+  top: 74px;
+  transition: transform 600ms;
+  transform: translateX(-200px);
+}
+.showMobileNav {
+  transition: transform 600ms;
+  transform: translateX(0);
+  position: absolute;
+  left: 0;
+  top: 74px;
+}
+
+.mobileUl {
+  background-color: $red;
+  height: 100%;
+}
+.categories {
+  padding-left: 20px;
+}
+.navLinks {
+  padding: 20px 30px;
+  display: block;
+  color: $darkBlue;
+  background-color: $red;
+}
+
+@media (min-width: $tablet) {
+  .navWrapper {
+    display: none;
+  }
+  .searchDropdown {
+    display: none;
+  }
+  .showSearchDropdown {
+    display: none;
+  }
+}
