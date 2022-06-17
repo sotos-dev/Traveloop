@@ -13,7 +13,7 @@
     justify-content: space-between;
     color: white;
     font-size: 1.2rem;
-    height: 73px;
+    // height: 53px;
     // 2 Level
     .flexSides {
       display: flex;
@@ -25,7 +25,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
         transition: all 200ms;
 
         .topicsLink {
@@ -34,38 +34,35 @@
           align-items: center;
           gap: 5px;
           position: relative;
-          height: 73px;
+          padding: 20px 0;
+
           .innerLinksArea {
             visibility: hidden;
             position: absolute;
-            top: 73px;
+            top: 69px;
             left: 0;
             background-color: $red;
             color: $negative;
-            transition: all 200ms;
             width: 250px;
 
             .innerLinks {
               padding: 20px;
               display: block;
-              transition: all 200ms;
             }
           }
           &:hover {
             .innerLinksArea {
               visibility: visible;
               position: absolute;
-              top: 73px;
+              top: 69px;
               left: 0;
               background-color: $red;
               color: $negative;
-              transition: all 200ms;
               width: 250px;
 
               .innerLinks {
                 padding: 20px;
                 display: block;
-                transition: all 200ms;
               }
             }
           }
@@ -130,6 +127,19 @@
             color: $negative;
           }
         }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  // 1 Level
+  .navLaptopWrapper {
+    // 2 Level
+    .flexSides {
+      // 3 Level
+      .outerLinksArea {
+        gap: 30px;
       }
     }
   }

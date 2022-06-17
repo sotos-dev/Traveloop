@@ -1,0 +1,75 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.recentArticlesSection {
+  // 1 Level
+  .bigImg {
+    display: none;
+  }
+  // 1 Level
+  .content {
+    // 2 Level
+    .overTitle {
+      color: $red;
+    }
+    // 2 Level
+    .sectionTitle {
+    }
+    // 2 Level
+    .cardLinks {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .recentArticlesSection {
+    display: flex;
+    // 1 Level
+    .bigImg {
+      display: block;
+    }
+    // 1 Level
+    .content {
+      // 2 Level
+      .overTitle {
+      }
+      // 2 Level
+      .sectionTitle {
+      }
+      // 2 Level
+      .cardLinks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .recentArticlesSection {
+    display: flex;
+    // 1 Level
+    .bigImg {
+      display: block;
+    }
+    // 1 Level
+    .content {
+      // 2 Level
+      .overTitle {
+      }
+      // 2 Level
+      .sectionTitle {
+      }
+      // 2 Level
+      .cardLinks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}

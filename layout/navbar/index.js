@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <>
       <header className={styles.header}>
-        <Container>
+        <div className={styles.navContainer}>
           <NavMobile />
           <NavLaptop />
-        </Container>
+        </div>
       </header>
     </>
   )

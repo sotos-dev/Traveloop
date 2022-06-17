@@ -1,7 +1,25 @@
 @import "../../styles/colors";
+@import "../../styles/breakpoints";
 
 .header {
   background-color: $darkBlue;
   position: relative;
   z-index: 20;
+}
+
+.navContainer {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: $mobile) {
+  .navContainer {
+    padding: 0 15px;
+  }
+}
+@media (min-width: $tablet) {
+  .navContainer {
+    padding: 0 20px;
+  }
 }

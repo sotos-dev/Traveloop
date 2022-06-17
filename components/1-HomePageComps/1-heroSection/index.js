@@ -22,10 +22,12 @@ const HeroSection = () => {
           <div className={styles.content}>
             <p className={styles.firstP}>A travel for the</p>
             <h1 className={styles.heading}>Curious & Adventurous</h1>
-            <p>
-              Choose{" "}
+            <p className={styles.secondP}>
+              Choose
               <span>
-                <Link href='/'>Travel Topics Here </Link>
+                <Link href='/' passHref>
+                  <a>Travel Topics Here </a>
+                </Link>
               </span>
               to start your journey
             </p>

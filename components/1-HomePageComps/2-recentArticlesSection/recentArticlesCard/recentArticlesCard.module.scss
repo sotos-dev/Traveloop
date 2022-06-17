@@ -1,0 +1,40 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/breakpoints";
+
+.card {
+  // 1 Level
+  cursor: pointer;
+  transition: all 200ms;
+  &:hover {
+    box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
+    transition: all 200ms;
+  }
+  .img {
+    position: relative;
+    width: 100%;
+    // 2 Level
+    .category {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      color: $darkBlue;
+    }
+  }
+  // 1 Level
+  .content {
+    // 2 Level
+    padding: 5px 15px;
+    .date {
+      color: $smallTextColor;
+      margin: 10px 0 20px;
+    }
+    // 2 Level
+    .title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+}

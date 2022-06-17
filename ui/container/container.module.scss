@@ -3,16 +3,10 @@
 .container {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 50px 20px;
 }
-
-@media (min-width: $mobile) {
+@media (min-width: $smallTablet) {
   .container {
-    padding: 0 15px;
-  }
-}
-@media (min-width: $tablet) {
-  .container {
-    padding: 0 20px;
+    padding: 20px;
   }
 }
