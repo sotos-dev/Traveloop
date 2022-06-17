@@ -5,111 +5,177 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
   position: relative;
-  z-index: 10;
-}
+  z-index: 20;
 
-// Mobile Nav Menu Toggle Button
-.navToggleButton {
-  color: white;
-  cursor: pointer;
-}
-
-// Logo
-.logo {
-  max-width: 120px;
-}
-
-// Search Icon + Dropdown
-.searchIconWrapper {
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  .searchIcon {
+  // 1 Level
+  .navToggleButton {
     color: white;
+    cursor: pointer;
+  }
+
+  // 1 Level
+  .logo {
+    max-width: 120px;
+  }
+
+  // 1 Level
+  .searchIconWrapper {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // 2 Level
+    .searchIcon {
+      color: white;
+    }
   }
 }
+
 .searchDropdown {
   position: absolute;
-  z-index: -10;
+  top: 84px;
+  // z-index: 0;
   width: 100%;
   margin-left: -15px;
   background-color: $red;
   height: 60px;
   padding: 10px;
-  transform: translateY(-45px);
+  transform: translateX(-100vw);
   transition: transform 600ms;
+
+  .searchLabel {
+    position: relative;
+  }
+  .searchInput {
+    background-color: white;
+    height: 40px;
+    max-width: 640px;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 10px 0 35px;
+    color: $copyColor;
+  }
+  .inputSearchIcon {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 }
 .showSearchDropdown {
   position: absolute;
-  z-index: -10;
+  top: 84px;
+  // z-index: 0;
   transition: transform 600ms;
-  transform: translateY(15px);
+  transform: translateX(0);
   width: 100%;
   margin-left: -15px;
   background-color: $red;
   height: 60px;
   padding: 10px;
-}
-.searchLabel {
-  position: relative;
-}
-.searchInput {
-  background-color: white;
-  height: 40px;
-  max-width: 640px;
-  min-width: 100%;
-  margin: 0 auto;
-  display: block;
-  border-radius: 4px;
-  font-size: 1.2rem;
-  padding: 0 10px 0 35px;
-  color: $copyColor;
-}
-.inputSearchIcon {
-  position: absolute;
-  top: 11px;
-  left: 11px;
-  font-size: 1.2rem;
-  cursor: pointer;
+
+  .searchLabel {
+    position: relative;
+  }
+  .searchInput {
+    background-color: white;
+    height: 40px;
+    max-width: 640px;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 10px 0 35px;
+    color: $copyColor;
+  }
+  .inputSearchIcon {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 }
 
-// Mobile Navigation
+// Hidden Mobile Nav
 .mobileNav {
   position: absolute;
   left: 0;
   top: 74px;
-  transition: transform 600ms;
-  transform: translateX(-200px);
+  width: 70vw;
+  transition: transform 1000ms;
+  transform: translateX(-100vw);
+  // 1 Level
+  .mobileUl {
+    background-color: $darkBlue;
+    height: 100%;
+  }
+  // 1 Level
+  .categories {
+    padding-left: 20px;
+  }
+  // 1 Level
+  .navLinks {
+    padding: 20px 30px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+  // 1 Level
+  .indentedNavLinks {
+    padding: 20px 50px 20px 65px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
 }
+// Displayed Mobile Nav
 .showMobileNav {
   transition: transform 600ms;
   transform: translateX(0);
   position: absolute;
   left: 0;
+  width: 70vw;
   top: 74px;
+  // 1 Level
+  .mobileUl {
+    background-color: $darkBlue;
+    height: 100%;
+  }
+  // 1 Level
+  .categories {
+    padding-left: 20px;
+  }
+  // 1 Level
+  .navLinks {
+    padding: 20px 30px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+  // 1 Level
+  .indentedNavLinks {
+    padding: 20px 50px 20px 65px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
 }
 
-.mobileUl {
-  background-color: $red;
-  height: 100%;
-}
-.categories {
-  padding-left: 20px;
-}
-.navLinks {
-  padding: 20px 30px;
-  display: block;
-  color: $darkBlue;
-  background-color: $red;
-}
-
-@media (min-width: $tablet) {
+@media (min-width: $laptop) {
+  .hideNavbar {
+    display: none;
+  }
   .navWrapper {
     display: none;
   }

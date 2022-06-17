@@ -1,10 +1,10 @@
-import Logo from "../../ui/Logo"
+import Logo from "../../ui/logo/Logo"
 import styles from "./navMobile.module.scss"
 import Divider from "../../ui/divider/Divider"
 import Navlink from "./navlink"
 import { CgMenuHotdog } from "react-icons/cg"
 import { HiOutlineSearch } from "react-icons/hi"
-import { useState } from "react"
+import React, { useState } from "react"
 import { outerLinks, destinationLinks } from "../../utils/navbarUtils"
 
 const NavMobile = () => {
@@ -25,7 +25,7 @@ const NavMobile = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.hideNavbar}>
         <div className={styles.navWrapper}>
           {/* Menu Button */}
           <div onClick={toggleNavbar}>
@@ -64,29 +64,27 @@ const NavMobile = () => {
           <ul className={styles.mobileUl}>
             {outerLinks.map((outerLink, index) => {
               return (
-                <>
+                <React.Fragment key={outerLink.key}>
                   <Navlink
-                    // paint={styles.navlinks}
-                    key={outerLink.name}
+                    classes={styles.navLinks}
                     name={outerLink.name}
                     linkDestination={outerLink.linkDestination}
                   />
-                  <Divider />
+                  {outerLink.key === "register" ? null : <Divider />}
+
                   {index === 0
-                    ? destinationLinks.map((destinationLink) => {
+                    ? destinationLinks.map((destinationLink, index) => {
                         return (
-                          <>
-                            <Navlink
-                              //   paint={styles.navlinks}
-                              key={destinationLink.name}
-                              name={destinationLink.name}
-                              linkDestination={destinationLink.linkDestination}
-                            />
-                          </>
+                          <Navlink
+                            classes={styles.indentedNavLinks}
+                            key={destinationLink.key}
+                            name={destinationLink.name}
+                            linkDestination={destinationLink.linkDestination}
+                          />
                         )
                       })
                     : null}
-                </>
+                </React.Fragment>
               )
             })}
           </ul>

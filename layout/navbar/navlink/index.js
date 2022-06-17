@@ -1,11 +1,11 @@
 import Link from "next/link"
 import styles from "../navMobile.module.scss"
 
-const Navlink = ({ name, linkDestination, paint }) => {
+const Navlink = ({ name, linkDestination, classes }) => {
   return (
     <>
       <Link href={linkDestination} passHref>
-        <a className={styles.Navlinks}>{name}</a>
+        <a className={classes}>{name}</a>
       </Link>
     </>
   )
