@@ -11,15 +11,55 @@
     // 2 Level
     .overTitle {
       color: $red;
+      margin-bottom: 7px;
+      font-size: 0.9rem;
     }
     // 2 Level
     .sectionTitle {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
     }
     // 2 Level
     .cardLinks {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      display: flex;
+      gap: 30px;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+      }
+    }
+  }
+}
+
+@media (min-width: $smallTablet) {
+  .recentArticlesSection {
+    // 1 Level
+    .bigImg {
+      display: none;
+    }
+    // 1 Level
+    .content {
+      // 2 Level
+      .overTitle {
+        color: $red;
+        margin-bottom: 7px;
+        font-size: 0.9rem;
+      }
+      // 2 Level
+      .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      // 2 Level
+      .cardLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
     }
   }
 }

@@ -8,8 +8,8 @@ import RecentArticlesCard from "./recentArticlesCard"
 const RecentArticlesSection = () => {
   return (
     <>
-      <Container>
-        <section className={styles.recentArticlesSection}>
+      <section className={styles.recentArticlesSection}>
+        <Container>
           {/* Big Image */}
           <div className={styles.bigImg}>
             <Image
@@ -29,8 +29,8 @@ const RecentArticlesSection = () => {
               })}
             </div>
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
     </>
   )
 }
