@@ -3,33 +3,36 @@
 
 .recentArticlesSection {
   // 1 Level
-  .bigImg {
-    display: none;
-  }
-  // 1 Level
-  .content {
+  .rasWrapper {
     // 2 Level
-    .overTitle {
-      color: $red;
-      margin-bottom: 7px;
-      font-size: 0.9rem;
+    .bigImgWrapper {
+      display: none;
     }
     // 2 Level
-    .sectionTitle {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-    // 2 Level
-    .cardLinks {
-      display: flex;
-      gap: 30px;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -ms-overflow-style: none; /* for Internet Explorer, Edge */
-      scrollbar-width: none; /* for Firefox */
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none; /* for Chrome, Safari, and Opera */
+    .content {
+      // 3 Level
+      .overTitle {
+        color: $red;
+        margin-bottom: 7px;
+        font-size: 0.9rem;
+      }
+      // 3 Level
+      .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      // 3 Level
+      .cardLinks {
+        display: flex;
+        gap: 30px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none; /* for Chrome, Safari, and Opera */
+        }
       }
     }
   }
@@ -38,52 +41,30 @@
 @media (min-width: $smallTablet) {
   .recentArticlesSection {
     // 1 Level
-    .bigImg {
-      display: none;
-    }
-    // 1 Level
-    .content {
+    .rasWrapper {
       // 2 Level
-      .overTitle {
-        color: $red;
-        margin-bottom: 7px;
-        font-size: 0.9rem;
+      .bigImgWrapper {
+        display: none;
       }
       // 2 Level
-      .sectionTitle {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-      }
-      // 2 Level
-      .cardLinks {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-      }
-    }
-  }
-}
-
-@media (min-width: $laptop) {
-  .recentArticlesSection {
-    display: flex;
-    // 1 Level
-    .bigImg {
-      display: block;
-    }
-    // 1 Level
-    .content {
-      // 2 Level
-      .overTitle {
-      }
-      // 2 Level
-      .sectionTitle {
-      }
-      // 2 Level
-      .cardLinks {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+      .content {
+        // 3 Level
+        .overTitle {
+          color: $red;
+          margin-bottom: 7px;
+          font-size: 1.1rem;
+        }
+        // 3 Level
+        .sectionTitle {
+          font-size: 2rem;
+          margin-bottom: 15px;
+        }
+        // 3 Level
+        .cardLinks {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
       }
     }
   }
@@ -91,24 +72,211 @@
 
 @media (min-width: $laptop) {
   .recentArticlesSection {
-    display: flex;
     // 1 Level
-    .bigImg {
-      display: block;
+    .rasWrapper {
+      display: flex;
+      gap: 30px;
+      // 2 Level
+      .bigImgWrapper {
+        width: 100%;
+        display: block;
+        position: relative;
+
+        .bigImgShader {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          /* ff 3.6+ */
+          background: -moz-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          /* safari 5.1+,chrome 10+ */
+          background: -webkit-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          /* opera 11.10+ */
+          background: -o-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+
+          /* ie 6-9 */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+
+          /* ie 10+ */
+          background: -ms-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+
+          /* global 94%+ browsers support */
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+        .bigImg {
+          border-radius: 14px;
+        }
+        .bigImgContent {
+          position: absolute;
+          color: white;
+          bottom: 30px;
+          padding: 20px 30px;
+
+          .bigImgDate {
+            font-size: 1.3rem;
+          }
+          .bigImgTitle {
+            font-weight: 700;
+            font-size: 2.3rem;
+            max-width: 400px;
+            margin: 20px 0;
+          }
+          .bigImgCategoryArea {
+            display: flex;
+            gap: 20px;
+            .bigImgCategories {
+              padding: 5px 20px;
+              color: $darkBlue;
+              background-color: white;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+      // 2 Level
+      .content {
+        // 3 Level
+        .overTitle {
+          color: $red;
+          margin-bottom: 7px;
+          font-size: 1.1rem;
+        }
+        // 3 Level
+        .sectionTitle {
+          font-size: 2.1rem;
+          margin-bottom: 15px;
+        }
+        // 3 Level
+        .cardLinks {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
     }
+  }
+}
+
+@media (min-width: $desktop) {
+  .recentArticlesSection {
     // 1 Level
-    .content {
+    .rasWrapper {
+      display: flex;
+      gap: 50px;
       // 2 Level
-      .overTitle {
+      .bigImgWrapper {
+        width: 100%;
+        display: block;
+        position: relative;
+
+        .bigImgShader {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          /* ff 3.6+ */
+          background: -moz-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          /* safari 5.1+,chrome 10+ */
+          background: -webkit-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          /* opera 11.10+ */
+          background: -o-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+
+          /* ie 6-9 */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+
+          /* ie 10+ */
+          background: -ms-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+
+          /* global 94%+ browsers support */
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25) 1%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+        .bigImg {
+          border-radius: 14px;
+        }
+        .bigImgContent {
+          position: absolute;
+          color: white;
+          bottom: 30px;
+          padding: 30px 50px;
+
+          .bigImgDate {
+            font-size: 1.3rem;
+          }
+          .bigImgTitle {
+            font-weight: 700;
+            font-size: 2.3rem;
+            max-width: 400px;
+            margin: 20px 0;
+          }
+          .bigImgCategoryArea {
+            display: flex;
+            gap: 20px;
+            .bigImgCategories {
+              padding: 5px 20px;
+              color: $darkBlue;
+              background-color: white;
+              border-radius: 20px;
+            }
+          }
+        }
       }
       // 2 Level
-      .sectionTitle {
-      }
-      // 2 Level
-      .cardLinks {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+      .content {
+        // 3 Level
+        .overTitle {
+          color: $red;
+          margin-bottom: 7px;
+          font-size: 1.1rem;
+        }
+        // 3 Level
+        .sectionTitle {
+          font-size: 2rem;
+          margin-bottom: 15px;
+        }
+        // 3 Level
+        .cardLinks {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
       }
     }
   }
