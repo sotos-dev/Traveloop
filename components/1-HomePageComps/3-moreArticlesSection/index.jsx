@@ -18,9 +18,8 @@ const MoreArticlesSection = () => {
             <div className={styles.sidebar}>
               {/* Search Articles Area */}
               <div>
-                <label htmlFor="search-articles">
-                  <input type="text" />
-                  <
+                <label htmlFor='search-articles'>
+                  <input type='text' />
                 </label>
               </div>
               {/* About Us Area */}
