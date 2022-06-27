@@ -1,7 +1,9 @@
 import Container from "../../../ui/container/Container"
-import styles from "./moreArticles.module.scss"
-import MoreArticlesCard from "./moreArticlesCard"
+import styles from "./index.module.scss"
+import MoreArticlesCard from "./MoreArticlesCard"
 import { moreArticlesCardsData } from "../../../utils/HomepageUtils/index"
+import AboutUs from "./AboutUs"
+
 const MoreArticlesSection = () => {
   return (
     <>
@@ -23,7 +25,7 @@ const MoreArticlesSection = () => {
                 </label>
               </div>
               {/* About Us Area */}
-              <div></div>
+              <AboutUs />
               {/* All Categories Area */}
               <div></div>
             </div>
