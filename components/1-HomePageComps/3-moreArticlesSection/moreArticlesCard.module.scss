@@ -3,12 +3,111 @@
 
 .cardWrapper {
   display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
   // 1 Level
-  .cardImg {
+  .cardImgWrapper {
+    position: relative;
+    max-width: 768px;
+    .cardImg {
+      border-radius: 12px;
+    }
+    .cardCategory {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: $titleColor;
+      background-color: white;
+      border-radius: 12px;
+      padding: 2px 15px;
+      font-size: 1rem;
+    }
   }
   // 1 Level
   .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 15px;
     .date {
+      color: $smallTextColor;
+      margin-bottom: 10px;
+    }
+    .title {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: $titleColor;
+    }
+    .excerpt {
+      color: $copyColor;
+      margin-bottom: 10px;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      color: $red;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    // 1 Level
+    .cardImgWrapper {
+      position: relative;
+      max-width: 768px;
+      flex-grow: 1;
+      .cardImg {
+        border-radius: 12px;
+      }
+      .cardCategory {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: $titleColor;
+        background-color: white;
+        border-radius: 12px;
+        padding: 2px 15px;
+        font-size: 1rem;
+      }
+    }
+    // 1 Level
+    .cardContent {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px 15px;
+      .date {
+        color: $smallTextColor;
+        margin-bottom: 10px;
+      }
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+        color: $titleColor;
+      }
+      .excerpt {
+        color: $copyColor;
+        margin-bottom: 10px;
+      }
+      .cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        color: $red;
+      }
     }
   }
 }

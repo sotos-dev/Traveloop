@@ -5,5 +5,14 @@
   background-color: $offWhite;
   // 1 Level
   .moreArticlesWrapper {
+    .articles {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .sidebar {
+      display: none;
+    }
   }
 }

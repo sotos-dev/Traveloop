@@ -3,6 +3,8 @@ import styles from "./index.module.scss"
 import MoreArticlesCard from "./MoreArticlesCard"
 import { moreArticlesCardsData } from "../../../utils/HomepageUtils/index"
 import AboutUs from "./AboutUs"
+import AllCategories from "./AllCategories"
+import SearchArticles from "./SearchArticles"
 
 const MoreArticlesSection = () => {
   return (
@@ -11,7 +13,7 @@ const MoreArticlesSection = () => {
         <Container>
           <div className={styles.moreArticlesWrapper}>
             {/* Articles + Pagination Area */}
-            <div>
+            <div className={styles.articles}>
               {moreArticlesCardsData.map((card) => {
                 return <MoreArticlesCard card={card} key={card.title} />
               })}
@@ -19,15 +21,11 @@ const MoreArticlesSection = () => {
             {/* Sidebar Area */}
             <div className={styles.sidebar}>
               {/* Search Articles Area */}
-              <div>
-                <label htmlFor='search-articles'>
-                  <input type='text' />
-                </label>
-              </div>
+              <SearchArticles />
               {/* About Us Area */}
               <AboutUs />
               {/* All Categories Area */}
-              <div></div>
+              <AllCategories />
             </div>
           </div>
         </Container>
