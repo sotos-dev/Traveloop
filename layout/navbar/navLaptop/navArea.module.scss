@@ -1,0 +1,71 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.outerLinksArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 200ms;
+
+  .topicsLink {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    padding: 20px 0;
+
+    .innerLinksArea {
+      visibility: hidden;
+      position: absolute;
+      top: 69px;
+      left: 0;
+      background-color: $red;
+      color: $negative;
+      width: 250px;
+
+      .innerLinks {
+        padding: 20px;
+        display: block;
+      }
+    }
+    &:hover {
+      .innerLinksArea {
+        visibility: visible;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        background-color: $red;
+        color: $negative;
+        width: 250px;
+
+        .innerLinks {
+          padding: 20px;
+          display: block;
+        }
+      }
+    }
+
+    .dropDownIcon {
+      margin-top: 5px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .outerlinks {
+    transition: all 200ms;
+    &:hover {
+      color: $red;
+    }
+    &:active {
+      color: $negative;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .outerLinksArea {
+    gap: 30px;
+  }
+}

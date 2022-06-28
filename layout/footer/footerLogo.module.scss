@@ -1,0 +1,12 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  .message {
+    font-style: italic;
+  }
+}

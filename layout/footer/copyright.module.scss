@@ -1,0 +1,21 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+
+.copyrightWrapper {
+  background-color: $underFooter;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .copyrightIcon {
+    margin-top: 3px;
+  }
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-left: 5px;
+  }
+}

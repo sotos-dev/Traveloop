@@ -1,0 +1,67 @@
+@import "../../../styles/breakpoints";
+@import "../../../styles/colors";
+
+// Hidden Mobile Nav
+.mobileNav {
+  position: absolute;
+  left: 0;
+  top: 74px;
+  width: 70vw;
+  transition: transform 1000ms;
+  transform: translateX(-100vw);
+  // 1 Level
+  .mobileUl {
+    background-color: $darkBlue;
+    height: 100%;
+  }
+  // 1 Level
+  .categories {
+    padding-left: 20px;
+  }
+  // 1 Level
+  .navLinks {
+    padding: 20px 30px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+  // 1 Level
+  .indentedNavLinks {
+    padding: 20px 50px 20px 65px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+}
+// Displayed Mobile Nav
+.showMobileNav {
+  transition: transform 600ms;
+  transform: translateX(0);
+  position: absolute;
+  left: 0;
+  width: 70vw;
+  top: 74px;
+  // 1 Level
+  .mobileUl {
+    background-color: $darkBlue;
+    height: 100%;
+  }
+  // 1 Level
+  .categories {
+    padding-left: 20px;
+  }
+  // 1 Level
+  .navLinks {
+    padding: 20px 30px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+  // 1 Level
+  .indentedNavLinks {
+    padding: 20px 50px 20px 65px;
+    display: block;
+    color: white;
+    background-color: $darkBlue;
+  }
+}

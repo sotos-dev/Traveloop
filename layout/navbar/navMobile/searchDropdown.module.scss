@@ -1,0 +1,82 @@
+@import "../../../styles/breakpoints";
+@import "../../../styles/colors";
+
+.searchDropdown {
+  position: absolute;
+  top: 84px;
+  // z-index: 0;
+  width: 100%;
+  margin-left: -15px;
+  background-color: $red;
+  height: 60px;
+  padding: 10px;
+  transform: translateX(-100vw);
+  transition: transform 600ms;
+
+  .searchLabel {
+    position: relative;
+  }
+  .searchInput {
+    background-color: white;
+    height: 40px;
+    max-width: 640px;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 10px 0 35px;
+    color: $copyColor;
+  }
+  .inputSearchIcon {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
+.showSearchDropdown {
+  position: absolute;
+  top: 84px;
+  // z-index: 0;
+  transition: transform 600ms;
+  transform: translateX(0);
+  width: 100%;
+  margin-left: -15px;
+  background-color: $red;
+  height: 60px;
+  padding: 10px;
+
+  .searchLabel {
+    position: relative;
+  }
+  .searchInput {
+    background-color: white;
+    height: 40px;
+    max-width: 640px;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 10px 0 35px;
+    color: $copyColor;
+  }
+  .inputSearchIcon {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $laptop) {
+  .searchDropdown {
+    display: none;
+  }
+  .showSearchDropdown {
+    display: none;
+  }
+}

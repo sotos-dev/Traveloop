@@ -1,0 +1,26 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.authArea {
+  display: flex;
+  gap: 30px;
+
+  .loginLink {
+    transition: all 200ms;
+    &:hover {
+      color: $red;
+    }
+    &:active {
+      color: $negative;
+    }
+  }
+  .registerLink {
+    transition: all 200ms;
+    &:hover {
+      color: $red;
+    }
+    &:active {
+      color: $negative;
+    }
+  }
+}

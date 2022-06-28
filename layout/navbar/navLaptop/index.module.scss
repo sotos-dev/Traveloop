@@ -1,0 +1,25 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.navLaptopWrapper {
+  display: none;
+}
+
+@media (min-width: $laptop) {
+  // 1 Level
+  .navLaptopWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.2rem;
+    // height: 53px;
+    // 2 Level
+    .flexSides {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}

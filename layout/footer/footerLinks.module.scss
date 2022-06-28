@@ -1,0 +1,13 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+
+.linkWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .link {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/breakpoints";
+@import "../../../styles/colors";
+
+// 1 Level
+.searchIconWrapper {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  // 2 Level
+  .searchIcon {
+    color: white;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../styles/breakpoints";
+@import "../../../styles/colors";
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 20;
+}
+
+@media (min-width: $laptop) {
+  .hideNavbar {
+    display: none;
+  }
+  .navWrapper {
+    display: none;
+  }
+}

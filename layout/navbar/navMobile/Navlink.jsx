@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "../navMobile.module.scss"
+// import styles from "../navMobile.module.scss"
 
 const Navlink = ({ name, linkDestination, classes }) => {
   return (
