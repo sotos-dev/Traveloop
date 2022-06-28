@@ -5,6 +5,7 @@ import { moreArticlesCardsData } from "../../../utils/HomepageUtils/index"
 import AboutUs from "./AboutUs"
 import AllCategories from "./AllCategories"
 import SearchArticles from "./SearchArticles"
+import { categories } from "../../../utils/HomepageUtils/index"
 
 const MoreArticlesSection = () => {
   return (
@@ -25,7 +26,7 @@ const MoreArticlesSection = () => {
               {/* About Us Area */}
               <AboutUs />
               {/* All Categories Area */}
-              <AllCategories />
+              <AllCategories categories={categories} />
             </div>
           </div>
         </Container>

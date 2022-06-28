@@ -70,3 +70,12 @@ export const moreArticlesCardsData = [
     category: "Destination",
   },
 ]
+
+export const categories = [
+  { name: "Destinations", id: "destinations" },
+  { name: "Travel inspiration", id: "travel_inspiration" },
+  { name: "Travel Planning", id: "travel_planning" },
+  { name: "Family Travel", id: "family _travel" },
+  { name: "Travel Gear", id: "travel_gear" },
+  { name: "Stories", id: "stories" },
+]

@@ -6,10 +6,12 @@
   flex-direction: column;
   background-color: white;
   border-radius: 12px;
+  width: 100%;
   // 1 Level
   .cardImgWrapper {
     position: relative;
     max-width: 768px;
+    // 2 Level
     .cardImg {
       border-radius: 12px;
     }
@@ -31,25 +33,35 @@
     align-items: flex-start;
     justify-content: center;
     padding: 20px 15px;
+    // 2 Level
     .date {
       color: $smallTextColor;
       margin-bottom: 10px;
     }
+    // 2 Level
     .title {
       font-size: 1.2rem;
       margin-bottom: 14px;
       color: $titleColor;
     }
+    // 2 Level
     .excerpt {
       color: $copyColor;
       margin-bottom: 10px;
     }
+    // 2 Level
     .cta {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 7px;
       color: $red;
+      margin-top: 10px;
+
+      // 3 Level
+      .icon {
+        margin-top: 4px;
+      }
     }
   }
 }
@@ -66,9 +78,11 @@
       position: relative;
       max-width: 768px;
       flex-grow: 1;
+      // 2 Level
       .cardImg {
         border-radius: 12px;
       }
+      // 2 Level
       .cardCategory {
         position: absolute;
         top: 15px;
@@ -86,21 +100,25 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
       padding: 20px 15px;
+      // gap: 10px;
+      // 2 Level
       .date {
         color: $smallTextColor;
         margin-bottom: 10px;
       }
+      // 2 Level
       .title {
         font-size: 1.2rem;
         margin-bottom: 14px;
         color: $titleColor;
       }
+      // 2 Level
       .excerpt {
         color: $copyColor;
         margin-bottom: 10px;
       }
+      // 2 Level
       .cta {
         display: flex;
         justify-content: center;

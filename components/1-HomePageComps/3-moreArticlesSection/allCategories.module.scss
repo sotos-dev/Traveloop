@@ -1,0 +1,19 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.allCategoriesWrapper {
+  background-color: white;
+  padding: 40px 20px;
+  // 1 Level
+  .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  // 1 Level
+  .categoriesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 10px;
+  }
+}

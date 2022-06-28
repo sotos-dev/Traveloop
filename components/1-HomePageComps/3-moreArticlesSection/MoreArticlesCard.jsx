@@ -30,7 +30,7 @@ const MoreArticlesCard = ({
           <p className={styles.excerpt}>{excerpt}</p>
           {/* Card CTA */}
           <div className={styles.cta}>
-            <p>Read more</p> <BsArrowRight />
+            <p>Read more</p> <BsArrowRight className={styles.icon} />
           </div>
         </div>
       </div>
