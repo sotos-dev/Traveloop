@@ -1,0 +1,91 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.magazineContent {
+  // 1 Level
+  .overTitle {
+    color: $red;
+    text-transform: uppercase;
+  }
+  // 1 Level
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0 20px;
+    color: $titleColor;
+  }
+  // 1 Level
+  .copy {
+    color: $copyColor;
+    margin-bottom: 30px;
+  }
+  // 1 Level
+  .linkWrapper {
+    // 2 Level
+    max-width: 200px;
+    border: 1px solid $red;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    .link {
+      color: $red;
+      font-weight: 700;
+    }
+    .icon {
+      color: $red;
+      margin-top: 3px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: $smallTablet) {
+  .magazineContent {
+    width: 50%;
+    // 1 Level
+    .overTitle {
+      color: $red;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    // 1 Level
+    .title {
+      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 10px 0 20px;
+      color: $titleColor;
+      max-width: 500px;
+    }
+    // 1 Level
+    .copy {
+      color: $copyColor;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+    // 1 Level
+    .linkWrapper {
+      // 2 Level
+      max-width: 200px;
+      border: 1px solid $red;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 20px;
+      .link {
+        color: $red;
+        font-weight: 700;
+      }
+      .icon {
+        color: $red;
+        margin-top: 3px;
+        font-weight: 700;
+      }
+    }
+  }
+}

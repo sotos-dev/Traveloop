@@ -1,0 +1,164 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.bigImgWrapper {
+  display: none;
+}
+
+@media (min-width: $laptop) {
+  // 1 Level
+  .bigImgWrapper {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .bigImgShader {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* ff 3.6+ */
+      background: -moz-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      /* safari 5.1+,chrome 10+ */
+      background: -webkit-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      /* opera 11.10+ */
+      background: -o-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      /* ie 6-9 */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+
+      /* ie 10+ */
+      background: -ms-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      /* global 94%+ browsers support */
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    .bigImg {
+      border-radius: 14px;
+    }
+    .bigImgContent {
+      position: absolute;
+      color: white;
+      bottom: 30px;
+      padding: 20px 30px;
+
+      .bigImgDate {
+        font-size: 1.3rem;
+      }
+      .bigImgTitle {
+        font-weight: 700;
+        font-size: 2.3rem;
+        max-width: 400px;
+        margin: 20px 0;
+      }
+      .bigImgCategoryArea {
+        display: flex;
+        gap: 20px;
+        .bigImgCategories {
+          padding: 5px 20px;
+          color: $darkBlue;
+          background-color: white;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  // 1 Level
+  .bigImgWrapper {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .bigImgShader {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* ff 3.6+ */
+      background: -moz-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      /* safari 5.1+,chrome 10+ */
+      background: -webkit-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      /* opera 11.10+ */
+      background: -o-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      /* ie 6-9 */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+
+      /* ie 10+ */
+      background: -ms-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      /* global 94%+ browsers support */
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 1%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    .bigImg {
+      border-radius: 14px;
+    }
+    .bigImgContent {
+      position: absolute;
+      color: white;
+      bottom: 30px;
+      padding: 30px 50px;
+
+      .bigImgDate {
+        font-size: 1.3rem;
+      }
+      .bigImgTitle {
+        font-weight: 700;
+        font-size: 2.3rem;
+        max-width: 400px;
+        margin: 20px 0;
+      }
+      .bigImgCategoryArea {
+        display: flex;
+        gap: 20px;
+        .bigImgCategories {
+          padding: 5px 20px;
+          color: $darkBlue;
+          background-color: white;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

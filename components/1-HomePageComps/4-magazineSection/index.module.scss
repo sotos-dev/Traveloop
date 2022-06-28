@@ -1,0 +1,46 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.magazineSection {
+  // 1 Level
+  .magazineWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media (min-width: $smallTablet) {
+  .magazineSection {
+    // 1 Level
+    .magazineWrapper {
+      align-items: center;
+      gap: 30px;
+      // transform: translateY(-200px);
+    }
+  }
+}
+@media (min-width: $tablet) {
+  .magazineSection {
+    // 1 Level
+    .magazineWrapper {
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+      // transform: translateY(-200px);
+    }
+  }
+}
+@media (min-width: $laptop) {
+  .magazineSection {
+    // 1 Level
+    .magazineWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+      transform: translateY(-200px);
+    }
+  }
+}

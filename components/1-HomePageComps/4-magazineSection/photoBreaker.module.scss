@@ -1,0 +1,10 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.photoWrapper {
+  z-index: -10;
+  // 1 Level
+  .img {
+    z-index: -10;
+  }
+}

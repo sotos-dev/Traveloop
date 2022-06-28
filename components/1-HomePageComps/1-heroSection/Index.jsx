@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import HeroImage from "../../../assets/images/home-hero-photo.jpg"
-import styles from "../1-heroSection/heroSection.module.scss"
+import styles from "../1-heroSection/index.module.scss"
 import Container from "../../../ui/container/Container"
 
 const HeroSection = () => {

@@ -1,0 +1,11 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.imgWrapper {
+  //   position: relative;
+  .img {
+    // position: absolute;
+    // transform: translateY(-300px);
+    z-index: 10;
+  }
+}
