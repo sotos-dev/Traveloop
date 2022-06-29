@@ -8,7 +8,7 @@ const AllCategories = ({ categories }) => {
         <h3 className={styles.title}>All Categories</h3>
         <div className={styles.categoriesWrapper}>
           {categories.map((item) => {
-            return <Category item={item.name} />
+            return <Category key={item.name} item={item.name} />
           })}
         </div>
       </div>

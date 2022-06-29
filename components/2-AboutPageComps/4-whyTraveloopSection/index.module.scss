@@ -1,0 +1,84 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.whyTraveloopSection {
+  display: flex;
+  align-items: center;
+  .whyTraveloopWrapper {
+    max-width: 950px;
+    .title {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: $titleColor;
+    }
+    .copy {
+      color: $copyColor;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .linkWrapper {
+      // 2 Level
+      max-width: 200px;
+      border: 1px solid $red;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 20px;
+      .link {
+        color: $red;
+        font-weight: 700;
+      }
+      .icon {
+        color: $red;
+        margin-top: 3px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .whyTraveloopSection {
+    display: flex;
+    align-items: center;
+    .whyTraveloopWrapper {
+      max-width: 950px;
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+      }
+      .copy {
+        color: $copyColor;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        max-width: 950px;
+        margin-bottom: 30px;
+      }
+
+      .linkWrapper {
+        // 2 Level
+        max-width: 200px;
+        border: 1px solid $red;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 20px;
+        .link {
+          color: $red;
+          font-weight: 700;
+        }
+        .icon {
+          color: $red;
+          margin-top: 3px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import Divider from "../../../ui/divider/Divider"
 import Navlink from "./Navlink"
 import { outerLinks, destinationLinks } from "../../../utils/navbarUtils"
-import React from "react"
 import styles from "./navArea.module.scss"
+import React from "react"
 
 const NavArea = ({ showNavbar }) => {
   return (

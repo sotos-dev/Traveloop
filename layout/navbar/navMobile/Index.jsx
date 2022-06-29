@@ -1,5 +1,5 @@
 import styles from "./index.module.scss"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState, createRef } from "react"
 
 import MenuButton from "./MenuButton"
 import MobileLogo from "./MobileLogo"
@@ -12,6 +12,17 @@ const NavMobile = () => {
   const [showSearchInput, setShowSearchInput] = useState(false)
   // Mobile Nav Toggler
   const [showNavbar, setShowNavbar] = useState(false)
+  const mobileButtonRef = useRef()
+
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (e.target !== mobileButtonRef.current) {
+        setShowNavbar(false)
+      }
+    }
+    document.body.addEventListener("click", closeMenu)
+    return () => document.body.removeEventListener("click", closeMenu)
+  }, [])
 
   const toggleSearchInput = () => {
     setShowSearchInput((prev) => (prev = !prev))
@@ -29,7 +40,9 @@ const NavMobile = () => {
         {/* Default Visibles */}
         <div className={styles.navWrapper}>
           {/* Menu Button */}
-          <MenuButton toggleNavbar={toggleNavbar} />
+          <button ref={mobileButtonRef} onClick={toggleNavbar}>
+            <MenuButton />
+          </button>
           {/* Logo */}
           <MobileLogo />
           {/* Search Icon */}

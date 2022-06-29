@@ -4,7 +4,7 @@ import Link from "next/link"
 const Navlink = ({ name, linkDestination, classes }) => {
   return (
     <>
-      <Link href={linkDestination} passHref>
+      <Link href={`${linkDestination}`} passHref>
         <a className={classes}>{name}</a>
       </Link>
     </>

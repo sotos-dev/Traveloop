@@ -15,6 +15,7 @@ const HeroSection = () => {
             alt='a bridge in nature'
             layout='fill'
             objectFit='cover'
+            priority
           />
         </div>
         {/* Content */}

@@ -13,6 +13,7 @@ const HeroSection = () => {
             alt='street with Havana old type 2 story houses'
             layout='fill'
             objectFit='cover'
+            priority
           />
         </div>
         <h1 className={styles.title}>Welcome to Traveloop</h1>

@@ -1,7 +1,7 @@
 export const outerLinks = [
   {
     name: "Topics",
-    linkDestination: "/",
+    linkDestination: "/about",
     key: "topics",
   },
   {

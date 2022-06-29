@@ -1,12 +1,11 @@
+import React from "react"
 import { CgMenuHotdog } from "react-icons/cg"
 import styles from "./menuButton.module.scss"
 
-const MenuButton = ({ toggleNavbar }) => {
+const MenuButton = () => {
   return (
     <>
-      <div onClick={toggleNavbar}>
-        <CgMenuHotdog size={40} className={styles.navToggleButton} />
-      </div>
+      <CgMenuHotdog size={40} className={styles.navToggleButton} />
     </>
   )
 }
