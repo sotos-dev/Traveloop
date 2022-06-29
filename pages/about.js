@@ -1,5 +1,6 @@
-import HeroSection from "../components/2-pagePlaceholder/1-heroSection"
-import BlogWriters from "../components/2-pagePlaceholder/2-blogWriters"
+import HeroSection from "../components/2-AboutPageComps/1-heroSection"
+import BlogWriters from "../components/2-AboutPageComps/2-blogWriters"
+import AboutTraveloop from "../components/2-AboutPageComps/3-aboutTraveloop/Index"
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
       {/* Blog Writers */}
       <BlogWriters />
       {/* About Traveloop */}
-
+      <AboutTraveloop />
       {/* Why Traveloop */}
 
       {/* Get In Touch */}

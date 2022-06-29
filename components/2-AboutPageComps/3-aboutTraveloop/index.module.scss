@@ -1,0 +1,10 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.aboutSection {
+  .aboutSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

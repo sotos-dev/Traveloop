@@ -1,4 +1,6 @@
 @import "the-new-css-reset/css/reset.css";
+@import "./styles/colors";
+@import "./styles/breakpoints";
 
 // Typography
 $lora: "Lora";
@@ -25,4 +27,8 @@ span,
 strong,
 input {
   font-family: $lato;
+}
+
+body {
+  background-color: $offWhite;
 }

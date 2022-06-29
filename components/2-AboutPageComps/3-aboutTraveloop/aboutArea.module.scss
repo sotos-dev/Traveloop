@@ -1,0 +1,48 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.aboutAreaWrapper {
+  .title {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: $titleColor;
+  }
+  .copy1 {
+    color: $copyColor;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .copy2 {
+    color: $copyColor;
+    font-size: 1.1rem;
+  }
+  .spanMakeBold {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $tablet) {
+  .aboutAreaWrapper {
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+    .copy1 {
+      color: $copyColor;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      max-width: 950px;
+      margin-bottom: 30px;
+    }
+    .copy2 {
+      color: $copyColor;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      max-width: 950px;
+    }
+    .spanMakeBold {
+      font-weight: bold;
+    }
+  }
+}

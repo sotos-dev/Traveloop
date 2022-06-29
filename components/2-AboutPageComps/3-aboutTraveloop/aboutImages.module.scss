@@ -1,0 +1,55 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.aboutImagesWrapper {
+  margin: 50px 0;
+  background-color: white;
+  padding: 22px 10px;
+  border-radius: 20px;
+  width: 100%;
+  .imgsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imgWrapper {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  .img {
+    border-radius: 20px;
+  }
+
+  .copy {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: $smallTablet) {
+  .aboutImagesWrapper {
+    margin: 50px 0;
+    background-color: white;
+    padding: 22px 20px;
+    border-radius: 20px;
+    min-width: 640px;
+    max-width: 950px;
+    width: 100%;
+
+    .imgsWrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .copy {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  }
+}

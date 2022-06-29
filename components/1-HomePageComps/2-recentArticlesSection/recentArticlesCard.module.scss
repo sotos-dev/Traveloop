@@ -8,7 +8,7 @@
   min-width: 250px;
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  background-color: $offWhite;
+  background-color: white;
   border-radius: 12px;
   &:hover {
     box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
@@ -55,7 +55,6 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    background-color: $offWhite;
     border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
@@ -103,7 +102,6 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    background-color: $offWhite;
     border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
@@ -151,7 +149,6 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    background-color: $offWhite;
     border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);

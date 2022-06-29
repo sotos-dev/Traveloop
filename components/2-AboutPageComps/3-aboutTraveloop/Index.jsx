@@ -1,13 +1,15 @@
+import Container from "../../../ui/container/Container"
 import AboutArea from "./AboutArea"
 import AboutImages from "./AboutImages"
 import AboutQuote from "./AboutQuote"
+import styles from "./index.module.scss"
 
 const AboutTraveloop = () => {
   return (
     <>
-      <section className={aboutSection}>
+      <section className={styles.aboutSection}>
         <Container>
-          <div className={aboutSectionWrapper}>
+          <div className={styles.aboutSectionWrapper}>
             <AboutArea />
             <AboutImages />
             <AboutQuote />
