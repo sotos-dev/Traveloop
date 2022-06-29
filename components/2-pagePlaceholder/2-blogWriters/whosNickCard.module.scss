@@ -1,0 +1,71 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.cardWrapper {
+  box-shadow: 0 0 15px 4px rgba(177, 177, 177, 0.2);
+  padding: 120px 25px 60px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid $red;
+
+  transform: translateY(-50px);
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+
+  .imgWrapper {
+    position: absolute;
+    top: -100px;
+  }
+  .title {
+    color: $titleColor;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .copy {
+    color: $copyColor;
+    text-align: center;
+    max-width: 500px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: $smallTablet) {
+  .cardWrapper {
+    transform: translateY(0);
+    .title {
+      color: $titleColor;
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    .copy {
+      color: $copyColor;
+      text-align: center;
+      max-width: 750px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .cardWrapper {
+    .title {
+      color: $titleColor;
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    .copy {
+      color: $copyColor;
+      text-align: center;
+      max-width: 750px;
+      font-size: 1.1rem;
+    }
+  }
+}

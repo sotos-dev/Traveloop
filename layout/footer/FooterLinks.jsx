@@ -11,7 +11,7 @@ const FooterLinks = () => {
         <Link href='/' passHref>
           <a className={styles.link}>Latest posts</a>
         </Link>
-        <Link href='/' passHref>
+        <Link href='/about' passHref>
           <a className={styles.link}>About</a>
         </Link>
       </div>

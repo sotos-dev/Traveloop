@@ -47,7 +47,7 @@ const NavArea = () => {
             <Link href='/'> Latest Posts</Link>
           </li>
           <li className={styles.outerlinks}>
-            <Link href='/'> About</Link>
+            <Link href='/about'> About</Link>
           </li>
         </ul>
       </nav>

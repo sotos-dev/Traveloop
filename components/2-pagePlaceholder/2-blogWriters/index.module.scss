@@ -1,0 +1,11 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.blogWritersSection {
+  @media (min-width: $smallTablet) {
+    .writersCardsWrapper {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
