@@ -1,34 +1,19 @@
 import Container from "../../ui/container/Container"
 import styles from "./index.module.scss"
-import { auth } from "../../firebase/firebase_config"
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-} from "firebase/auth"
 import { useState } from "react"
+import { useAuth } from "../../store/AuthContext"
 
 const RegisterUser = () => {
   const [userEmail, setUserEmail] = useState("")
   const [userPassword, setUserPassword] = useState("")
   const [user, setUser] = useState("")
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser)
-  })
+  const { currentUser, registerUser } = useAuth()
 
-  const createUser = (e) => {
+  const createUser = async (e) => {
     e.preventDefault()
-    createUserWithEmailAndPassword(auth, userEmail, userPassword)
-      .then((userCredential) => {
-        const user = userCredential.user
-        console.log(user)
-      })
-      .catch((error) => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        console.log(errorCode)
-        console.log(errorMessage)
-      })
+    const user = await registerUser(userEmail, userPassword)
+    console.log(user)
   }
 
   return (
