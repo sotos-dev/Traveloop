@@ -8,7 +8,7 @@ const AuthArea = () => {
         <Link href='/' passHref>
           <a className={styles.loginLink}>Login</a>
         </Link>
-        <Link href='/' passHref>
+        <Link href='/register' passHref>
           <a className={styles.registerLink}>Register</a>
         </Link>
       </div>

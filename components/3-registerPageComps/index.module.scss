@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+
+.registerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .registerWrapper {
+    .registerForm {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .inputWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .label {
+        font-size: 1.3rem;
+      }
+      .inputField {
+        border: 1px solid $darkBlue;
+        height: 40px;
+        width: 350px;
+        font-size: 1.5rem;
+        padding: 2px 5px;
+      }
+    }
+    .registerButton {
+      padding: 14px 35px;
+      background-color: $red;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 1.3rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
