@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.3",
     "axios": "^0.27.2",
     "firebase": "^9.8.4",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.33.1",
     "react-icons": "^4.4.0",
     "sass": "^1.52.3",
-    "the-new-css-reset": "^1.6.1"
+    "the-new-css-reset": "^1.6.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "8.17.0",

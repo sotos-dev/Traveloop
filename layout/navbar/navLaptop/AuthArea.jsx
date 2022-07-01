@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "./authArea.module.scss"
-import { useAuth } from "../../../store/AuthContext"
+import { useAuth } from "../../../context/AuthContext"
 import { useRouter } from "next/router"
 
 const AuthArea = () => {
