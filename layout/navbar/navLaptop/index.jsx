@@ -1,6 +1,5 @@
 import Logo from "../../../ui/logo/Logo"
 import styles from "./index.module.scss"
-import { useState } from "react"
 import NavArea from "./NavArea"
 import SearchArea from "./SearchArea"
 import AuthArea from "./AuthArea"

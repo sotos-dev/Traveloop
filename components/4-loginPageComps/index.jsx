@@ -4,28 +4,39 @@ import { useState } from "react"
 import { useAuth } from "../../context/AuthContext"
 import { useRouter } from "next/router"
 
-const RegisterUser = () => {
+const LoginUser = () => {
   const [userEmail, setUserEmail] = useState("")
   const [userPassword, setUserPassword] = useState("")
   const [error, setError] = useState("")
 
   const router = useRouter()
 
-  const { registerUser } = useAuth()
+  const { loginUser, currentUser } = useAuth()
+  console.log(currentUser)
 
-  const createUser = async (e) => {
+  const singInUser = async (e) => {
     e.preventDefault()
 
-    if (!email || !password) {
+    if (!userEmail || !userPassword) {
       setError("Please enter email and password")
       return
     }
 
     try {
-      await registerUser(userEmail, userPassword)
+      const { user } = await loginUser(userEmail, userPassword)
+      setError("")
+      console.log(user)
+
+      if (!user) {
+        console.log("there has been an error sir")
+        setError("there has been an error sir")
+        return
+      }
+      console.log("all good mate")
       router.push("/dashboard")
     } catch (error) {
-      setError("incorrect email or password")
+      console.log("firebase error")
+      setError("incorrect email or password: " + error)
     }
   }
 
@@ -35,7 +46,7 @@ const RegisterUser = () => {
         <Container>
           <div className={styles.registerWrapper}>
             <p>{error}</p>
-            <form onSubmit={createUser} className={styles.registerForm}>
+            <form onSubmit={singInUser} className={styles.registerForm}>
               {/* Email Field */}
               <div className={styles.inputWrapper}>
                 <label htmlFor='email' className={styles.label}>
@@ -65,7 +76,7 @@ const RegisterUser = () => {
                 />
               </div>
               {/* Register Button */}
-              <button className={styles.registerButton}>Register</button>
+              <button className={styles.registerButton}>Login</button>
             </form>
             {}
           </div>
@@ -75,4 +86,4 @@ const RegisterUser = () => {
   )
 }
 
-export default RegisterUser
+export default LoginUser

@@ -16,9 +16,9 @@ export const useAuth = () => {
 }
 
 // Auth provider
-export const AuthProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null)
-  const [loading, setLoading] = useState(null)
+  const [loading, setLoading] = useState(true)
   const userInfo = useRef()
 
   // Registers User
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   // Logins User
   const loginUser = (userEmail, userPassword) => {
     signInWithEmailAndPassword(auth, userEmail, userPassword)
-    return
+    console.log("i ran")
   }
   // Logs Out User
   const logout = () => {
@@ -39,10 +39,16 @@ export const AuthProvider = ({ children }) => {
   // Persists Logged User
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setCurrentUser(user)
+      if (user) {
+        setCurrentUser(user)
+      } else {
+        setCurrentUser(null)
+      }
       setLoading(false)
     })
-    return unsubscribe
+    return () => {
+      unsubscribe()
+    }
   }, [])
 
   const value = {

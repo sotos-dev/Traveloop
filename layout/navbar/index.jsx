@@ -1,6 +1,6 @@
 import styles from "./index.module.scss"
-import NavMobile from "./navMobile/Index"
-import NavLaptop from "./navLaptop/Index"
+import NavMobile from "./navMobile"
+import NavLaptop from "./navLaptop"
 const Navbar = () => {
   return (
     <>

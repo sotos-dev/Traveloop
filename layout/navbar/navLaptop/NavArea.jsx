@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { RiArrowDropDownLine } from "react-icons/ri"
+
 import styles from "./navArea.module.scss"
 
 const NavArea = () => {

@@ -1,15 +1,26 @@
 import "../styles/globals.scss"
 import Layout from "../layout"
-import { AuthProvider } from "../store/AuthContext"
+import { AuthContextProvider } from "../context/AuthContext"
+import { useRouter } from "next/router"
+import ProtectedRoute from "../utils/ProtectedRoute"
+
+const noAuthRequired = ["/", "/login", "/signup"]
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
   return (
     <>
-      <AuthProvider>
+      <AuthContextProvider>
         <Layout>
-          <Component {...pageProps} />
+          {noAuthRequired.includes(router.pathname) ? (
+            <Component {...pageProps} />
+          ) : (
+            <ProtectedRoute>
+              <Component {...pageProps} />
+            </ProtectedRoute>
+          )}
         </Layout>
-      </AuthProvider>
+      </AuthContextProvider>
     </>
   )
 }
