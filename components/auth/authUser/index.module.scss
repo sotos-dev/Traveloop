@@ -1,12 +1,12 @@
 @import "../../../styles/colors";
 @import "../../../styles/breakpoints";
 
-.registerSection {
+.authSection {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  .registerWrapper {
+  .authWrapper {
     .registerForm {
       display: flex;
       flex-direction: column;

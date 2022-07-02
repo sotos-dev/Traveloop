@@ -9,8 +9,18 @@ const AuthArea = () => {
   const { currentUser, logout } = useAuth()
   // Router
   const router = useRouter()
-  // Context
-  const { setShowLoginModal, setShowRegisterModal } = useModal()
+  // Modal Context
+  const { setShowAuthModal, setShowRegistrationForm } = useModal()
+
+  const showRegisterModal = () => {
+    setShowAuthModal((prev) => (prev = !prev))
+    setShowRegistrationForm(true)
+  }
+
+  const showLoginModal = () => {
+    setShowAuthModal((prev) => (prev = !prev))
+    setShowRegistrationForm(false)
+  }
 
   const logUserOut = () => {
     logout()
@@ -21,14 +31,10 @@ const AuthArea = () => {
     <>
       {!currentUser && (
         <div className={styles.authArea}>
-          <p
-            onClick={() => setShowLoginModal((prev) => (prev = !prev))}
-            className={styles.loginLink}>
+          <p onClick={showLoginModal} className={styles.loginLink}>
             Login
           </p>
-          <p
-            onClick={() => setShowRegisterModal((prev) => (prev = !prev))}
-            className={styles.registerLink}>
+          <p onClick={showRegisterModal} className={styles.registerLink}>
             Register
           </p>
         </div>

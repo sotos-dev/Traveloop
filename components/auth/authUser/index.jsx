@@ -7,8 +7,11 @@ import * as Yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form"
 import { useModal } from "../../../context/ModalContext"
+import Github from "../../../assets/images/github.svg"
+import Image from "next/image"
+import { AiOutlineCloseCircle } from "react-icons/ai"
 
-const LoginUser = () => {
+const AuthUser = () => {
   // State
   const [error, setError] = useState("")
   // Router
@@ -16,7 +19,8 @@ const LoginUser = () => {
   // Auth Hook
   const { loginUser } = useAuth()
   // Modal Hook
-  const { setShowLoginModal } = useModal()
+  const { setShowLoginModal, showRegistrationForm, setShowRegistrationForm } =
+    useModal()
   // Yup Validation Schema
   const schema = Yup.object().shape({
     userEmail: Yup.string().email().required(),
@@ -41,18 +45,46 @@ const LoginUser = () => {
     }
   }
 
+  // Form Submission - Register User
+  const createUser = async (data) => {
+    try {
+      await registerUser(data.userEmail, data.userPassword)
+      router.push("/dashboard")
+    } catch (error) {
+      setError("something was wrong with your request: " + error)
+    }
+  }
+
   return (
     <>
-      <section className={styles.registerSection}>
+      <section className={styles.authSection}>
         <Container>
-          <div className={styles.registerWrapper}>
-            <p>{error}</p>
+          <div className={styles.authWrapper}>
+            {/* Title */}
+            {showRegistrationForm ? (
+              <h2>Create an Account</h2>
+            ) : (
+              <h2>Log In</h2>
+            )}
+            {showRegistrationForm ? (
+              <p>
+                Already have an account?
+                <span onClick={() => setShowRegisterForm(false)}>Login</span>
+              </p>
+            ) : (
+              <p>
+                Don't have an account?
+                <span onClick={() => setShowRegisterForm(true)}>Register</span>
+              </p>
+            )}
+            {/* Close Icon */}
             <span onClick={() => setShowLoginModal((prev) => (prev = !prev))}>
-              X
+              <AiOutlineCloseCircle size={30} />
             </span>
+            {/* Form  */}
             <form
               onSubmit={handleSubmit(singInUser)}
-              className={styles.registerForm}>
+              className={styles.showRegisterForm}>
               {/* Email Field */}
               <div className={styles.inputWrapper}>
                 <label htmlFor='email' className={styles.label}>
@@ -81,9 +113,19 @@ const LoginUser = () => {
                 <p>{errors.userPassword?.message}</p>
               </div>
               {/* Register Button */}
-              <button className={styles.registerButton}>Login</button>
+              {showRegistrationForm && (
+                <button className={styles.registerButton}>Register</button>
+              )}
+              {!showRegistrationForm && (
+                <button className={styles.registerButton}>Login</button>
+              )}
+              <p className={styles.firebaseError}>{error}</p>
+              <p>Or</p>
+              <button className={styles.githubButton}>
+                <Image src={Github} alt='github logo' />
+                <p>Continue with Github</p>
+              </button>
             </form>
-            {}
           </div>
         </Container>
       </section>
@@ -91,4 +133,4 @@ const LoginUser = () => {
   )
 }
 
-export default LoginUser
+export default AuthUser

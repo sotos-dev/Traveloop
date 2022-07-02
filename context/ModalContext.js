@@ -7,14 +7,14 @@ export const useModal = () => {
 }
 
 const ModalContextProvider = ({ children }) => {
-  const [showRegisterModal, setShowRegisterModal] = useState(false)
-  const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showAuthModal, setShowAuthModal] = useState(false)
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false)
 
   const value = {
-    showRegisterModal,
-    setShowRegisterModal,
-    showLoginModal,
-    setShowLoginModal,
+    showAuthModal,
+    setShowAuthModal,
+    showRegistrationForm,
+    setShowRegistrationForm,
   }
 
   return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
