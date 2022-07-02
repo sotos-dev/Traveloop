@@ -1,7 +1,7 @@
-import Container from "../../ui/container/Container"
+import Container from "../../../ui/container/Container"
 import styles from "./index.module.scss"
 import { useState } from "react"
-import { useAuth } from "../../context/AuthContext"
+import { useAuth } from "../../../context/AuthContext"
 import { useRouter } from "next/router"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -20,7 +20,7 @@ const RegisterUser = () => {
   // Auth
   const { registerUser, currentUser } = useAuth()
 
-  // Form Hook
+  // Form Hook with Resolver
   const {
     register,
     handleSubmit,
@@ -29,6 +29,7 @@ const RegisterUser = () => {
     resolver: yupResolver(schema),
   })
 
+  // Form Submission - Register User
   const createUser = async (data) => {
     try {
       await registerUser(data.userEmail, data.userPassword)

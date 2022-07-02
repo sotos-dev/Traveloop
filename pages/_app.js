@@ -3,6 +3,8 @@ import Layout from "../layout"
 import { AuthContextProvider } from "../context/AuthContext"
 import { useRouter } from "next/router"
 import ProtectedRoute from "../utils/ProtectedRoute"
+import Modal from "../ui/Modal"
+import ModalContextProvider from "../context/ModalContext"
 
 const noAuthRequired = ["/", "/login", "/register"]
 
@@ -11,15 +13,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <AuthContextProvider>
-        <Layout>
-          {noAuthRequired.includes(router.pathname) ? (
-            <Component {...pageProps} />
-          ) : (
-            <ProtectedRoute>
+        <ModalContextProvider>
+          <Modal></Modal>
+          <Layout>
+            {noAuthRequired.includes(router.pathname) ? (
               <Component {...pageProps} />
-            </ProtectedRoute>
-          )}
-        </Layout>
+            ) : (
+              <ProtectedRoute>
+                <Component {...pageProps} />
+              </ProtectedRoute>
+            )}
+          </Layout>
+        </ModalContextProvider>
       </AuthContextProvider>
     </>
   )

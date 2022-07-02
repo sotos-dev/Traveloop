@@ -9,18 +9,22 @@
     transition: all 200ms;
     &:hover {
       color: $red;
+      cursor: pointer;
     }
     &:active {
       color: $negative;
+      cursor: pointer;
     }
   }
   .registerLink {
     transition: all 200ms;
     &:hover {
       color: $red;
+      cursor: pointer;
     }
     &:active {
       color: $negative;
+      cursor: pointer;
     }
   }
 }

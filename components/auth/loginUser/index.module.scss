@@ -1,10 +1,11 @@
-@import "../../styles/colors";
-@import "../../styles/breakpoints";
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
 
 .registerSection {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
   .registerWrapper {
     .registerForm {
       display: flex;
