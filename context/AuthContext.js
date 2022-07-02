@@ -23,13 +23,11 @@ export const AuthContextProvider = ({ children }) => {
 
   // Registers User
   const registerUser = (userEmail, userPassword) => {
-    createUserWithEmailAndPassword(auth, userEmail, userPassword)
-    return
+    return createUserWithEmailAndPassword(auth, userEmail, userPassword)
   }
-  // Logins User
-  const loginUser = (userEmail, userPassword) => {
-    signInWithEmailAndPassword(auth, userEmail, userPassword)
-    console.log("i ran")
+  // Logs in User
+  const loginUser = async (userEmail, userPassword) => {
+    return await signInWithEmailAndPassword(auth, userEmail, userPassword)
   }
   // Logs Out User
   const logout = () => {
