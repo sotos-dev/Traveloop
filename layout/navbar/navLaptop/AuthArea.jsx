@@ -31,12 +31,12 @@ const AuthArea = () => {
     <>
       {!currentUser && (
         <div className={styles.authArea}>
-          <p onClick={showLoginModal} className={styles.loginLink}>
+          <button onClick={showLoginModal} className={styles.loginLink}>
             Login
-          </p>
-          <p onClick={showRegisterModal} className={styles.registerLink}>
+          </button>
+          <button onClick={showRegisterModal} className={styles.registerLink}>
             Register
-          </p>
+          </button>
         </div>
       )}
       {currentUser && (

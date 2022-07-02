@@ -2,7 +2,7 @@ import { useModal } from "../../context/ModalContext"
 import styles from "./index.module.scss"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRef } from "react"
-import AuthUser from "../../components/auth/authUser"
+import AuthUser from "../../components/auth"
 
 const Modal = () => {
   // Ref
