@@ -67,9 +67,11 @@ const AuthForm = ({
           </p>
         </button>
         <p className={styles.firebaseError}>{error}</p>
-        <p className={styles.privacyMessage}>
-          By signing up you agree to TraveLoop Privacy Policy.
-        </p>
+        {showRegistrationForm && (
+          <p className={styles.privacyMessage}>
+            By signing up you agree to TraveLoop Privacy Policy.
+          </p>
+        )}
       </form>
     </>
   )

@@ -48,8 +48,6 @@ const AuthUser = () => {
           setError("This email is not registered, please register")
         } else if (error.code === "auth/invalid-email") {
           setError("This email is not valid, please use a valid email")
-        } else if (error.code === "auth/user-disabled") {
-          setError("This email is not valid, please use a valid email")
         }
       }
     }
