@@ -2,7 +2,7 @@
 @import "../../../styles/colors";
 
 // Hidden Mobile Nav
-.mobileNav {
+.hideMobileNav {
   position: absolute;
   left: 0;
   top: 74px;
@@ -11,7 +11,7 @@
   transform: translateX(-100vw);
   // 1 Level
   .mobileUl {
-    background-color: $darkBlue;
+    background-color: $red;
     height: 100%;
   }
   // 1 Level
@@ -23,14 +23,15 @@
     padding: 20px 30px;
     display: block;
     color: white;
-    background-color: $darkBlue;
+    width: 100%;
+    background-color: $red;
   }
   // 1 Level
   .indentedNavLinks {
     padding: 20px 50px 20px 65px;
     display: block;
     color: white;
-    background-color: $darkBlue;
+    background-color: $red;
   }
 }
 // Displayed Mobile Nav
@@ -43,7 +44,7 @@
   top: 74px;
   // 1 Level
   .mobileUl {
-    background-color: $darkBlue;
+    background-color: white;
     height: 100%;
   }
   // 1 Level
@@ -54,14 +55,15 @@
   .navLinks {
     padding: 20px 30px;
     display: block;
+    width: 100%;
     color: white;
-    background-color: $darkBlue;
+    background-color: $red;
   }
   // 1 Level
   .indentedNavLinks {
     padding: 20px 50px 20px 65px;
     display: block;
     color: white;
-    background-color: $darkBlue;
+    background-color: $red;
   }
 }

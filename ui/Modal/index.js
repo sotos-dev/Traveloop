@@ -6,14 +6,13 @@ import AuthUser from "../../components/auth"
 
 const Modal = () => {
   // Ref
-  const registerCard = useRef()
-  const loginCard = useRef()
+  const authCard = useRef()
   // Modal Hook
   const { showAuthModal, setShowAuthModal } = useModal()
 
   // Click Outside - Close Modal
   const closeModal = (e) => {
-    if (!registerCard.current.contains(e.target)) {
+    if (!authCard.current.contains(e.target)) {
       setShowAuthModal(false)
     }
   }
@@ -28,7 +27,7 @@ const Modal = () => {
             exit={{ opacity: 0 }}
             onClick={closeModal}
             className={styles.modalWrapper}>
-            <div ref={registerCard}>{showAuthModal && <AuthUser />}</div>
+            <div ref={authCard}>{showAuthModal && <AuthUser />}</div>
           </motion.div>
         )}
       </AnimatePresence>

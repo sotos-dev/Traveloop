@@ -5,6 +5,8 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  signInWithPopup,
+  GithubAuthProvider,
 } from "firebase/auth"
 
 // Creates Context
@@ -15,19 +17,24 @@ export const useAuth = () => {
   return useContext(AuthContext)
 }
 
-// Auth provider
+// Auth provider function
 export const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null)
   const [loading, setLoading] = useState(true)
   const userInfo = useRef()
+  const provider = new GithubAuthProvider()
 
-  // Registers User
+  // Auth User with Github
+  const authWithGithub = () => {
+    return signInWithPopup(auth, provider)
+  }
+  // Registers User with Email and Password
   const registerUser = (userEmail, userPassword) => {
     return createUserWithEmailAndPassword(auth, userEmail, userPassword)
   }
-  // Logs in User
-  const loginUser = async (userEmail, userPassword) => {
-    return await signInWithEmailAndPassword(auth, userEmail, userPassword)
+  // Logs in User with Email and Password
+  const loginUser = (userEmail, userPassword) => {
+    return signInWithEmailAndPassword(auth, userEmail, userPassword)
   }
   // Logs Out User
   const logout = () => {
@@ -55,6 +62,7 @@ export const AuthContextProvider = ({ children }) => {
     loginUser,
     logout,
     userInfo,
+    authWithGithub,
   }
 
   return (

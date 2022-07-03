@@ -44,9 +44,6 @@ const AuthArea = () => {
           <button onClick={logUserOut} className={styles.registerLink}>
             Logout
           </button>
-          <Link href='/dashboard' passHref>
-            <a className={styles.loginLink}>Dashboard</a>
-          </Link>
         </>
       )}
     </>
