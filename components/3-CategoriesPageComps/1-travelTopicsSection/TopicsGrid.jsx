@@ -28,7 +28,7 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </div>
         </Link>
-        <Link href='/'>
+        <Link href='/' target='_blank'>
           <div className={`${styles.imgWrapper} ${styles.parthenon}`}>
             <Image src={Parthenon} alt='Parthenon' className={styles.img} />
             <div className={styles.copyWrapper}>

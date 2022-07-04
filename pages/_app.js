@@ -6,7 +6,7 @@ import ProtectedRoute from "../utils/ProtectedRoute"
 import Modal from "../ui/Modal"
 import ModalContextProvider from "../context/ModalContext"
 
-const noAuthRequired = ["/", "/login", "/register"]
+// const noAuthRequired = ["/", "/login", "/register"]
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -16,13 +16,14 @@ function MyApp({ Component, pageProps }) {
         <ModalContextProvider>
           <Modal></Modal>
           <Layout>
-            {noAuthRequired.includes(router.pathname) ? (
+            <Component {...pageProps} />
+            {/* {noAuthRequired.includes(router.pathname) ? (
               <Component {...pageProps} />
             ) : (
               <ProtectedRoute>
                 <Component {...pageProps} />
               </ProtectedRoute>
-            )}
+            )} */}
           </Layout>
         </ModalContextProvider>
       </AuthContextProvider>

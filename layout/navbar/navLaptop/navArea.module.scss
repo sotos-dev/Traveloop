@@ -1,65 +1,63 @@
 @import "../../../styles/colors";
 @import "../../../styles/breakpoints";
 
-.outerLinksArea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: all 200ms;
-
-  .topicsLink {
-    cursor: pointer;
+.nav {
+  position: relative;
+  height: 100%;
+  .visibleNavLinks {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
-    position: relative;
-    padding: 20px 0;
+    gap: 20px;
+    transition: all 200ms;
+    margin-right: 10px;
+    height: 100%;
 
-    .innerLinksArea {
-      visibility: hidden;
-      position: absolute;
-      top: 69px;
-      left: 0;
-      background-color: $red;
-      color: $negative;
-      width: 250px;
+    .categoriesHover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      height: 88px;
+      transition: all 300ms;
+      cursor: pointer;
 
-      .innerLinks {
-        padding: 20px;
-        display: block;
-      }
-    }
-    &:hover {
-      .innerLinksArea {
-        visibility: visible;
+      .categoriesLinks {
         position: absolute;
-        top: 69px;
-        left: 0;
-        background-color: $red;
-        color: $negative;
-        width: 250px;
+        visibility: hidden;
+        opacity: 0;
+      }
 
-        .innerLinks {
-          padding: 20px;
-          display: block;
+      &:hover {
+        .categoriesLinks {
+          visibility: visible;
+          opacity: 100;
+          position: absolute;
+          top: 88px;
+          left: 0;
+          .categoryLink {
+            transition: all 300ms;
+            background-color: $offWhite;
+            display: block;
+            padding: 25px 40px;
+            color: $darkBlue;
+            &:hover {
+              color: white;
+              background-color: $darkBlue;
+            }
+          }
         }
       }
     }
 
-    .dropDownIcon {
-      margin-top: 5px;
-      font-size: 1.5rem;
-    }
-  }
-
-  .outerlinks {
-    transition: all 200ms;
-    &:hover {
-      color: $red;
-    }
-    &:active {
-      color: $negative;
+    .outerlinks {
+      transition: all 200ms;
+      &:hover {
+        color: $red;
+      }
+      &:active {
+        color: $negative;
+      }
     }
   }
 }

@@ -26,7 +26,7 @@ const HeroSection = () => {
             <p className={styles.secondP}>
               Choose
               <span>
-                <Link href='/' passHref>
+                <Link href='/categories' passHref>
                   <a>Travel Topics Here </a>
                 </Link>
               </span>

@@ -6,43 +6,43 @@ import styles from "./navArea.module.scss"
 const NavArea = () => {
   return (
     <>
-      <nav>
-        <ul className={styles.outerLinksArea}>
-          {/* Topics LI */}
-          <li className={`${styles.topicsLink} ${styles.outerlinks}`}>
-            <Link href='/'>
-              <>
-                Topics
-                <RiArrowDropDownLine className={styles.dropDownIcon} />
-              </>
-            </Link>
-            <ul className={styles.innerLinksArea}>
-              <li>
-                <Link href='/' passHref>
-                  <a className={styles.innerLinks}> Destinations</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/' passHref>
-                  <a className={styles.innerLinks}> Travel planning</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/' passHref>
-                  <a className={styles.innerLinks}> Family travel</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/' passHref>
-                  <a className={styles.innerLinks}> Travel inspiration</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/' passHref>
-                  <a className={styles.innerLinks}> Stories</a>
-                </Link>
-              </li>
-            </ul>
+      <nav className={styles.nav}>
+        {/* Visible Nav Links */}
+        <ul className={styles.visibleNavLinks}>
+          <li className={styles.outerlinks}>
+            {/* Categories Hover */}
+            <div className={styles.categoriesHover}>
+              <span>Topics</span>
+              <RiArrowDropDownLine className={styles.dropDownIcon} />
+              {/* Categories Links */}
+              <ul className={styles.categoriesLinks}>
+                <li>
+                  <Link href='/' passHref>
+                    <a className={styles.categoryLink}> Destinations</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/' passHref>
+                    <a className={styles.categoryLink}> Travel planning</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/' passHref>
+                    <a className={styles.categoryLink}> Family travel</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/' passHref>
+                    <a className={styles.categoryLink}> Travel inspiration</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/' passHref>
+                    <a className={styles.categoryLink}> Stories</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </li>
           <li className={styles.outerlinks}>
             <Link href='/'> Latest Posts</Link>
