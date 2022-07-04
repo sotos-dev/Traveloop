@@ -12,13 +12,18 @@ const TopicsGrid = () => {
   return (
     <>
       <div className={styles.grid}>
+        {/* Image */}
         <Link href='/' passHref>
-          <a className={`${styles.imgWrapper} ${styles.island}`}>
-            <Image
-              src={Destinations}
-              alt='Destinations'
-              className={styles.img}
-            />
+          <a className={`${styles.imgOuterWrapper} ${styles.island}`}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={Destinations}
+                alt='Destinations'
+                layout='fill'
+                objectFit='cover'
+                className={styles.img}
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Destinations</p>
               <p className={styles.copy}>
@@ -28,9 +33,18 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </a>
         </Link>
+        {/* Image */}
         <Link href='/' target='_blank'>
-          <a className={`${styles.imgWrapper} ${styles.parthenon}`}>
-            <Image src={Parthenon} alt='Parthenon' className={styles.img} />
+          <a className={`${styles.imgOuterWrapper} ${styles.parthenon}`}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={Parthenon}
+                alt='Parthenon'
+                layout='responsive'
+                objectFit='cover'
+                className={styles.img}
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Destinations</p>
               <p className={styles.copy}>
@@ -40,13 +54,18 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </a>
         </Link>
+        {/* Image */}
         <Link href='/'>
-          <a className={styles.imgWrapper}>
-            <Image
-              src={TravelPlanning}
-              alt='Travel Planning'
-              className={styles.img}
-            />
+          <a className={styles.imgOuterWrapper}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={TravelPlanning}
+                alt='Travel Planning'
+                className={styles.img}
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Travel Planning</p>
               <p className={styles.copy}>
@@ -56,13 +75,18 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </a>
         </Link>
+        {/* Image */}
         <Link href='/' passHref>
-          <a className={styles.imgWrapper}>
-            <Image
-              src={FamilyTravel}
-              alt='Family Travel'
-              className={styles.img}
-            />
+          <a className={styles.imgOuterWrapper}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={FamilyTravel}
+                alt='Family Travel'
+                className={styles.img}
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Family Travel</p>
               <p className={styles.copy}>
@@ -72,13 +96,18 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </a>
         </Link>
+        {/* Image */}
         <Link href='/' passHref>
-          <a className={styles.imgWrapper}>
-            <Image
-              src={TravelInspiration}
-              alt='Travel Inspiration'
-              className={styles.img}
-            />
+          <a className={styles.imgOuterWrapper}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={TravelInspiration}
+                alt='Travel Inspiration'
+                className={styles.img}
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Travel Inspiration</p>
               <p className={styles.copy}>
@@ -88,9 +117,18 @@ const TopicsGrid = () => {
             <div className={styles.shader}></div>
           </a>
         </Link>
+        {/* Image */}
         <Link href='/' passHref>
-          <a className={styles.imgWrapper}>
-            <Image src={Stories} alt='Stories' className={styles.img} />
+          <a className={styles.imgOuterWrapper}>
+            <div className={styles.imgWrapper}>
+              <Image
+                src={Stories}
+                alt='Stories'
+                className={styles.img}
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
             <div className={styles.copyWrapper}>
               <p className={styles.title}>Stories</p>
               <p className={styles.copy}>
