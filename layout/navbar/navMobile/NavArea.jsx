@@ -38,7 +38,7 @@ const NavArea = ({ showNavbar }) => {
         {/* Nav Area Links */}
         <ul className={styles.mobileUl}>
           <li>
-            <Link href='/topics' passHref>
+            <Link href='/categories' passHref>
               <a className={styles.navLinks}>Topics</a>
             </Link>
           </li>

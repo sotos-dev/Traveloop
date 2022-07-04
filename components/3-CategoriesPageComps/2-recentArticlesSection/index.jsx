@@ -1,12 +1,36 @@
-import styles from "./index.module.scss"
 import Image from "next/image"
+import Container from "../../../ui/container/Container"
+import styles from "./index.module.scss"
+import BigImage from "./BigImage"
+import { recentArticlesCardsData } from "../../../utils/HomepageUtils"
+import RecentArticlesCard from "./RecentArticlesCard"
+import Link from "next/link"
 
-const RecentArticles = () => {
+const RecentArticlesSection = () => {
   return (
     <>
-      <div>recent articles</div>
+      <section className={styles.recentArticlesSection}>
+        <Container>
+          {/* RAS Wrapper */}
+          <div className={styles.rasWrapper}>
+            <BigImage />
+            {/* Card Links + Title */}
+            <div className={styles.content}>
+              <div className={styles.title}>
+                <p className={styles.overTitle}>RECENT ARTICLES</p>
+                <h2 className={styles.sectionTitle}>News & Stories</h2>
+              </div>
+              <div className={styles.cardLinks}>
+                {recentArticlesCardsData.map((card) => {
+                  return <RecentArticlesCard key={card.title} card={card} />
+                })}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   )
 }
 
-export default RecentArticles
+export default RecentArticlesSection
