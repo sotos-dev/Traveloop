@@ -1,10 +1,7 @@
-import Image from "next/image"
 import Container from "../../../ui/container/Container"
 import styles from "./index.module.scss"
-import BigImage from "./BigImage"
 import { recentArticlesCardsData } from "../../../utils/HomepageUtils"
 import RecentArticlesCard from "./RecentArticlesCard"
-import Link from "next/link"
 
 const RecentArticlesSection = () => {
   return (
@@ -13,7 +10,6 @@ const RecentArticlesSection = () => {
         <Container>
           {/* RAS Wrapper */}
           <div className={styles.rasWrapper}>
-            <BigImage />
             {/* Card Links + Title */}
             <div className={styles.content}>
               <div className={styles.title}>
