@@ -1,8 +1,13 @@
 import styles from "./index.module.scss"
-import TopicsGrid from "./TopicsGrid"
+import Categories from "./Categories"
 import Container from "../../../ui/container/Container"
+import { db } from "../../../firebase/firebase_config"
+import { collection, getDocs } from "firebase/firestore"
+// import { useDB } from "../../../context/DBContext"
 
-const TravelTopics = () => {
+// const { getDestinationPosts } = useDB()
+
+const CategoriesSection = ({ categories }) => {
   return (
     <>
       <section className={styles.travelTopicsSection}>
@@ -13,7 +18,7 @@ const TravelTopics = () => {
               We create inspiring travel blogs about the world’s most beautiful
               places to make planning your holiday a piece of cake!
             </p>
-            <TopicsGrid />
+            <Categories categories={categories} />
           </div>
         </Container>
       </section>
@@ -21,4 +26,4 @@ const TravelTopics = () => {
   )
 }
 
-export default TravelTopics
+export default CategoriesSection

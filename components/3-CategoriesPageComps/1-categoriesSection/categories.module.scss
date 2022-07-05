@@ -12,12 +12,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .imgWrapper {
-      width: 100%;
-      display: block;
-      .img {
-        border-radius: 12px;
-      }
+    width: 100%;
+    min-height: 300px;
+    .img {
+      border-radius: 12px;
     }
     .copyWrapper {
       position: absolute;
@@ -82,45 +80,41 @@
       );
     }
   }
-  .island {
-    display: none;
+
+  .twoSpacePhoto {
+    grid-row: 1 / 2;
   }
-  // .parthenon {
-  //   display: block;
-  // }
 }
 
 @media (min-width: $bigMobile) {
   .grid {
     grid-template-columns: 1fr 1fr;
+    .imgOuterWrapper {
+      min-height: 350px;
+      .img {
+        border-radius: 12px;
+      }
+    }
   }
 }
 
 @media (min-width: $tablet) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
-
-    .imgOuterWrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .imgWrapper {
-        width: 100%;
-        display: block;
-        .img {
-          object-fit: cover;
-          display: block;
-          border-radius: 12px;
-        }
-      }
-    }
-    .island {
+    .twoSpacePhoto {
       grid-column: 1 / 3;
+      grid-row: 1 / 2;
     }
-    .parthenon {
-      display: none;
+  }
+}
+
+@media (min-width: $laptop) {
+  .grid {
+    .imgOuterWrapper {
+      min-height: 450px;
+      .img {
+        border-radius: 12px;
+      }
     }
   }
 }
