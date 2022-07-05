@@ -4,7 +4,6 @@ import { getDocs, collection } from "firebase/firestore"
 import { db } from "../../firebase/firebase_config"
 
 const CategoriesPage = ({ categories }) => {
-  console.log(categories)
   return (
     <>
       <CategoriesSection categories={categories} />
@@ -21,7 +20,7 @@ export const getStaticProps = async () => {
   const categories = []
 
   querySnap.forEach((doc) => {
-    categories.push(doc.data())
+    categories.push({ data: doc.data(), id: doc.id })
   })
 
   return {
