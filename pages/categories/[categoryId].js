@@ -31,15 +31,9 @@ export const getStaticPaths = async () => {
 }
 
 const CategoryPage = ({ postsList }) => {
-  console.log(postsList)
   return (
     <>
-      {postsList.map((posts) => {
-        console.log(posts)
-        return posts.map((post) => {
-          return <CategorySection post={post} />
-        })
-      })}
+      return <CategorySection postsList={postsList} />
     </>
   )
 }
@@ -62,9 +56,17 @@ export const getStaticProps = async ({ params }) => {
     return doc.data.posts
   })
 
-  return {
-    props: {
-      postsList: postsList,
-    },
+  if (postsList) {
+    return {
+      props: {
+        postsList: postsList,
+      },
+    }
+  } else {
+    return {
+      props: {
+        postsList: null,
+      },
+    }
   }
 }
