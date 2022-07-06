@@ -1,16 +1,13 @@
-import { getDocs, collection } from "firebase/firestore"
+import {
+  doc,
+  getDoc,
+  getDocs,
+  collection,
+  query,
+  where,
+} from "firebase/firestore"
 import { db } from "../../firebase/firebase_config"
-
-const CategoryPage = ({ id }) => {
-  return (
-    <>
-      <div>Category Page</div>
-      <p>{id}</p>
-    </>
-  )
-}
-
-export default CategoryPage
+import CategorySection from "../../components/4-CategoryPageComps/1-categorySection"
 
 export const getStaticPaths = async () => {
   const querySnap = await getDocs(collection(db, "categories"))
@@ -33,12 +30,41 @@ export const getStaticPaths = async () => {
   }
 }
 
+const CategoryPage = ({ postsList }) => {
+  console.log(postsList)
+  return (
+    <>
+      {postsList.map((posts) => {
+        console.log(posts)
+        return posts.map((post) => {
+          return <CategorySection post={post} />
+        })
+      })}
+    </>
+  )
+}
+
+export default CategoryPage
+
 export const getStaticProps = async ({ params }) => {
-  const id = params.categoryId
+  const category = params.categoryId
+  // The Query
+  const q = query(collection(db, "categories"), where("url", "==", category))
+  // Run the Query
+  const querySnapshot = await getDocs(q)
+  // What Category was Clicked on
+  const theCategory = querySnapshot.docs.map((doc) => {
+    return { id: doc.id, data: doc.data() }
+  })
+
+  // console.log(theCategory)
+  const postsList = theCategory.map((doc) => {
+    return doc.data.posts
+  })
 
   return {
     props: {
-      id,
+      postsList: postsList,
     },
   }
 }
