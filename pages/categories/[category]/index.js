@@ -6,8 +6,8 @@ import {
   query,
   where,
 } from "firebase/firestore"
-import { db } from "../../firebase/firebase_config"
-import CategorySection from "../../components/4-CategoryPageComps/1-categorySection"
+import { db } from "../../../firebase/firebase_config"
+import CategorySection from "../../../components/4-CategoryPageComps/1-categorySection"
 
 export const getStaticPaths = async () => {
   const querySnap = await getDocs(collection(db, "categories"))
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
   const paths = listOfIds.map((url) => {
     return {
-      params: { categoryId: url },
+      params: { category: url },
     }
   })
 
@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
   }
 }
 
-const CategoryPage = ({ postsList }) => {
+const CategoryPage = ({ postsList, category }) => {
   return (
     <>
       return <CategorySection postsList={postsList} />
@@ -41,7 +41,7 @@ const CategoryPage = ({ postsList }) => {
 export default CategoryPage
 
 export const getStaticProps = async ({ params }) => {
-  const category = params.categoryId
+  const category = params.category
   // The Query
   const q = query(collection(db, "categories"), where("url", "==", category))
   // Run the Query
@@ -50,23 +50,15 @@ export const getStaticProps = async ({ params }) => {
   const theCategory = querySnapshot.docs.map((doc) => {
     return { id: doc.id, data: doc.data() }
   })
-
-  // console.log(theCategory)
+  // This returns a nested array that includes the posts
   const postsList = theCategory.map((doc) => {
     return doc.data.posts
   })
 
-  if (postsList) {
-    return {
-      props: {
-        postsList: postsList,
-      },
-    }
-  } else {
-    return {
-      props: {
-        postsList: null,
-      },
-    }
+  return {
+    props: {
+      postsList: postsList,
+      category: category,
+    },
   }
 }
