@@ -11,9 +11,12 @@
   .cardImgWrapper {
     position: relative;
     max-width: 768px;
+    min-width: 250px;
+    min-height: 250px;
     // 2 Level
     .cardImg {
-      border-radius: 12px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
     }
     .cardCategory {
       position: absolute;
@@ -78,9 +81,13 @@
       position: relative;
       max-width: 768px;
       flex-grow: 1;
+      min-width: 300px;
+      min-height: 300px;
       // 2 Level
       .cardImg {
-        border-radius: 12px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
       }
       // 2 Level
       .cardCategory {

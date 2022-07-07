@@ -1,0 +1,11 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.postSection {
+  .postSectionWrapper {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+}

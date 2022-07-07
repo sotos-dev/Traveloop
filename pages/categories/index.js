@@ -14,7 +14,7 @@ const CategoriesPage = ({ categories }) => {
 
 export default CategoriesPage
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const querySnap = await getDocs(collection(db, "categories"))
 
   const categories = []

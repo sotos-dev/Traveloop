@@ -1,35 +1,49 @@
-import { useRouter } from "next/router"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import PostSection from "../../../../components/5-PostPageComps/1-postSection"
+import RelatedArticles from "../../../../components/5-PostPageComps/2-relatedArticlesSection"
+import { db } from "../../../../firebase/firebase_config"
 
-const PostPage = () => {
+const PostPage = ({ post, posts }) => {
   return (
     <>
-      <div>Post Page</div>
+      {/* Post Section with Sidebar */}
+      <PostSection post={post} posts={posts} />
+      {/* Related Articles */}
+      <RelatedArticles RelatedArticles={RelatedArticles} />
     </>
   )
 }
 
 export default PostPage
 
-export const getStaticProps = async ({ params }) => {
-  const post = params.post
+export const getServerSideProps = async ({ params }) => {
+  const q = query(
+    collection(db, "categories"),
+    where("url", "==", params.category)
+  )
 
-  console.log(params)
+  const querySnapShot = await getDocs(q)
+
+  let categoryResult = {}
+  let postObj = {}
+  let posts = []
+
+  querySnapShot.forEach((doc) => {
+    categoryResult = { ...doc.data() }
+  })
+
+  categoryResult.posts.forEach((post) => {
+    if (params.post === post.slug) {
+      postObj = post
+    }
+
+    posts.push(post)
+  })
 
   return {
     props: {
-      data: null,
-    },
-  }
-}
-
-export const getStaticPaths = async () => {
-  const querySnap = await getDocs(collection(db, "categories"))
-
-  //   console.log(params)
-
-  return {
-    props: {
-      data: null,
+      post: postObj,
+      posts: posts,
     },
   }
 }

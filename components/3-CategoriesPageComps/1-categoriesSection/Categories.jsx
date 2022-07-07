@@ -23,6 +23,8 @@ const Categories = ({ categories }) => {
                       layout='fill'
                       objectFit='cover'
                       className={styles.img}
+                      placeholder='blur'
+                      blurDataURL={category.data.img}
                     />
                     <div className={styles.copyWrapper}>
                       <p className={styles.title}>{category.data.name}</p>

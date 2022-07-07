@@ -1,0 +1,48 @@
+@import "../../../styles/colors";
+@import "../../../styles/breakpoints";
+
+.allCategoriesWrapper {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .allCategoriesWrapper {
+    background-color: white;
+    padding: 40px 20px;
+    display: block;
+    grid-column: 10 / 13;
+    // 1 Level
+    .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    // 1 Level
+    .categoriesWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 10px;
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .allCategoriesWrapper {
+    background-color: white;
+    padding: 40px 20px;
+    display: block;
+    grid-column: 9 / 13;
+    // 1 Level
+    .title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    // 1 Level
+    .categoriesWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 10px;
+    }
+  }
+}
