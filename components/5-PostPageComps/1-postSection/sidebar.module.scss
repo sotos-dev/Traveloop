@@ -7,7 +7,7 @@
 
 @media (min-width: $tablet) {
   .allCategoriesWrapper {
-    background-color: white;
+    // background-color: white;
     padding: 40px 20px;
     display: block;
     grid-column: 10 / 13;
@@ -22,13 +22,20 @@
       display: flex;
       flex-wrap: wrap;
       gap: 15px 10px;
+
+      .category {
+        background-color: $almostGray;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: 700;
+      }
     }
   }
 }
 
 @media (min-width: $laptop) {
   .allCategoriesWrapper {
-    background-color: white;
+    // background-color: white;
     padding: 40px 20px;
     display: block;
     grid-column: 9 / 13;

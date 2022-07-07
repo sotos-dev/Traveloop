@@ -37,7 +37,7 @@ const CategoryPost = ({ postsList, category }) => {
                     <div className={styles.cta}>
                       <Link href={`/categories/${post.category}/${post.slug}`}>
                         Read more
-                      </Link>{" "}
+                      </Link>
                       <BsArrowRight className={styles.icon} />
                     </div>
                   </div>

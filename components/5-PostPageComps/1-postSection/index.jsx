@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar"
 import Container from "../../../ui/container/Container"
 import styles from "./index.module.scss"
 
-const PostSection = ({ post, posts }) => {
+const PostSection = ({ post, posts, categories }) => {
   return (
     <>
       <section className={styles.postSection}>
@@ -17,7 +17,7 @@ const PostSection = ({ post, posts }) => {
               {/* Post Body Section Comp */}
               <PostBody post={post} />
               {/* Sidebar Section */}
-              <Sidebar />
+              <Sidebar posts={posts} categories={categories} />
             </div>
           </div>
         </Container>

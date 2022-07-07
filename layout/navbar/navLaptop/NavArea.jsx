@@ -17,27 +17,27 @@ const NavArea = () => {
               {/* Categories Links */}
               <ul className={styles.categoriesLinks}>
                 <li>
-                  <Link href='/' passHref>
+                  <Link href='/categories/destinations' passHref>
                     <a className={styles.categoryLink}> Destinations</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' passHref>
+                  <Link href='/categories/travel-planning' passHref>
                     <a className={styles.categoryLink}> Travel planning</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' passHref>
+                  <Link href='/categories/family-travel' passHref>
                     <a className={styles.categoryLink}> Family travel</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' passHref>
+                  <Link href='/categories/travel-inspiration' passHref>
                     <a className={styles.categoryLink}> Travel inspiration</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' passHref>
+                  <Link href='/categories/stories' passHref>
                     <a className={styles.categoryLink}> Stories</a>
                   </Link>
                 </li>
