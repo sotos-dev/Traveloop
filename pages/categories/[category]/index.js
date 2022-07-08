@@ -2,10 +2,10 @@ import { getDocs, collection, query, where } from "firebase/firestore"
 import { db } from "../../../firebase/firebase_config"
 import CategorySection from "../../../components/4-CategoryPageComps/1-categorySection"
 
-const CategoryPage = ({ posts }) => {
+const CategoryPage = ({ posts, categories }) => {
   return (
     <>
-      <CategorySection posts={posts} />
+      <CategorySection posts={posts} categories={categories} />
     </>
   )
 }
@@ -17,7 +17,6 @@ export const getServerSideProps = async ({ params }) => {
   // Declare Variables
   let category = []
   let posts = []
-
   // Query to find the Category
   const q = query(
     collection(db, "categories"),
@@ -32,12 +31,20 @@ export const getServerSideProps = async ({ params }) => {
   // Get the Posts from the category
   category.forEach((item) => posts.push(...item.data.posts))
 
-  // console.log(category)
-  console.log(posts)
+  // -------------------------
+  // Gets the Categories
+  const querySnap = await getDocs(collection(db, "categories"))
+  // Array Initialization
+  const categories = []
+  // Get's All data from all Categories
+  querySnap.forEach((doc) => {
+    categories.push({ data: doc.data(), id: doc.id })
+  })
 
   return {
     props: {
-      posts: posts,
+      posts,
+      categories,
     },
   }
 }

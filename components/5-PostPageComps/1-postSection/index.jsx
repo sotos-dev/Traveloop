@@ -1,6 +1,6 @@
 import HeroSection from "./HeroSection"
 import PostBody from "./PostBody"
-import Sidebar from "./Sidebar"
+import Sidebar from "./sidebar/index"
 import Container from "../../../ui/container/Container"
 import styles from "./index.module.scss"
 

@@ -20,6 +20,7 @@ const HeroSection = ({ post }) => {
             layout='fill'
             objectFit='cover'
             className={styles.img}
+            priority
           />
         </div>
       </div>

@@ -15,6 +15,8 @@ const PostBody = ({ post }) => {
               layout='fill'
               objectFit='cover'
               className={styles.img}
+              placeholder='blur'
+              blurDataURL={post.img1}
             />
           </div>
           <div className={styles.imgWrapper}>
@@ -24,6 +26,8 @@ const PostBody = ({ post }) => {
               layout='fill'
               objectFit='cover'
               className={styles.img}
+              placeholder='blur'
+              blurDataURL={post.img2}
             />
           </div>
         </div>

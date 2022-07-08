@@ -45,9 +45,6 @@ const NavArea = () => {
             </div>
           </li>
           <li className={styles.outerlinks}>
-            <Link href='/'> Latest Posts</Link>
-          </li>
-          <li className={styles.outerlinks}>
             <Link href='/about'> About</Link>
           </li>
         </ul>

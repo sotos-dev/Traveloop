@@ -1,5 +1,5 @@
-@import "../../../styles/colors";
-@import "../../../styles/breakpoints";
+@import "../../../../styles/colors";
+@import "../../../../styles/breakpoints";
 
 .aboutUsWrapper {
   display: flex;
@@ -34,6 +34,7 @@
     justify-content: space-around;
     gap: 10px;
     border-radius: 20px;
+    cursor: pointer;
     .link {
       color: $red;
       font-weight: 700;

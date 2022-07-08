@@ -51,5 +51,15 @@
 @media (min-width: $laptop) {
   .postBodyWrapper {
     grid-column: 1 / 9;
+
+    .imgOuterWrapper {
+      .imgWrapper {
+        height: 450px;
+      }
+      .img {
+        max-width: 50%;
+        border-radius: 8px;
+      }
+    }
   }
 }

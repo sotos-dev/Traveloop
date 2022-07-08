@@ -17,43 +17,46 @@ const PostPage = ({ post, posts, categories }) => {
 export default PostPage
 
 export const getServerSideProps = async ({ params }) => {
-  // Get Categories
+  // Initializations
   let topics = []
+  // Get Categories
   const categories = await getDocs(collection(db, "categories"))
   categories.forEach((category) => {
     topics.push({
-      category: category.data().category,
-      url: category.data().url,
+      id: category.id,
+      data: category.data(),
     })
   })
 
-  // Get Post
+  // Create Query to get a single Category
   const q = query(
     collection(db, "categories"),
     where("url", "==", params.category)
   )
-
+  // Get the Category
   const querySnapShot = await getDocs(q)
 
   let categoryResult = {}
-  let postObj = {}
+  let singlePost = {}
   let posts = []
-
+  // Get Category's Data
   querySnapShot.forEach((doc) => {
     categoryResult = { ...doc.data() }
   })
-
+  // Get Particular Post
   categoryResult.posts.forEach((post) => {
     if (params.post === post.slug) {
-      postObj = post
+      singlePost = post
     }
-
+    // Also get All Posts from this category
     posts.push(post)
   })
 
+  console.log(topics)
+
   return {
     props: {
-      post: postObj,
+      post: singlePost,
       posts: posts,
       categories: topics,
     },

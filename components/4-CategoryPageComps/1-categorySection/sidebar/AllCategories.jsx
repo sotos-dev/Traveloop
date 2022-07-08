@@ -1,5 +1,5 @@
+import Link from "next/link"
 import styles from "./allCategories.module.scss"
-import Category from "./Category"
 
 const AllCategories = ({ categories }) => {
   return (
@@ -7,8 +7,14 @@ const AllCategories = ({ categories }) => {
       <div className={styles.allCategoriesWrapper}>
         <h3 className={styles.title}>All Categories</h3>
         <div className={styles.categoriesWrapper}>
-          {categories.map((item) => {
-            return <Category key={item.name} item={item.name} />
+          {categories.map((category) => {
+            return (
+              <Link href={`${category.data.url}`}>
+                <a key={category.id} className={styles.category}>
+                  {category.data.category}
+                </a>
+              </Link>
+            )
           })}
         </div>
       </div>

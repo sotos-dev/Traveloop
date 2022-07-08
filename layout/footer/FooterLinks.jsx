@@ -5,11 +5,8 @@ const FooterLinks = () => {
   return (
     <>
       <div className={styles.linkWrapper}>
-        <Link href='/' passHref>
+        <Link href='/categories' passHref>
           <a className={styles.link}>Topics</a>
-        </Link>
-        <Link href='/' passHref>
-          <a className={styles.link}>Latest posts</a>
         </Link>
         <Link href='/about' passHref>
           <a className={styles.link}>About</a>

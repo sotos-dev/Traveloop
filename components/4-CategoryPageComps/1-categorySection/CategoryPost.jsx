@@ -20,6 +20,8 @@ const CategoryPost = ({ posts }) => {
                     layout='fill'
                     objectFit='cover'
                     className={styles.cardImg}
+                    placeholder='blur'
+                    blurDataURL={post.heroImg}
                   />
                   {/* Card Category */}
                   <p className={styles.cardCategory}>{post.category}</p>

@@ -44,38 +44,6 @@ const NavArea = ({ showNavbar }) => {
           </li>
           <Divider />
           <li>
-            <Link href='categories/destinations' passHref>
-              <a className={styles.indentedNavLinks}>Destinations</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='categories/travel-planning' passHref>
-              <a className={styles.indentedNavLinks}>Travel Planning</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='categories/family-travel' passHref>
-              <a className={styles.indentedNavLinks}>Family travel</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='categories/travel-inspiration' passHref>
-              <a className={styles.indentedNavLinks}>Travel inspiration</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='categories/stories' passHref>
-              <a className={styles.indentedNavLinks}>Stories</a>
-            </Link>
-          </li>
-          <Divider />
-          <li>
-            <Link href='/latest-posts' passHref>
-              <a className={styles.navLinks}>Latest posts</a>
-            </Link>
-          </li>
-          <Divider />
-          <li>
             <Link href='/about' passHref>
               <a className={styles.navLinks}>About</a>
             </Link>

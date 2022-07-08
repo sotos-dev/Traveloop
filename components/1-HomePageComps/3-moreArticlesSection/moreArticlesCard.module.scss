@@ -7,11 +7,11 @@
   background-color: white;
   border-radius: 12px;
   width: 100%;
+  position: relative;
   // 1 Level
   .cardImgWrapper {
     position: relative;
-    max-width: 768px;
-    // 2 Level
+    height: 300px;
     .cardImg {
       border-radius: 12px;
     }
@@ -76,7 +76,7 @@
     // 1 Level
     .cardImgWrapper {
       position: relative;
-      max-width: 768px;
+      min-width: 400px;
       flex-grow: 1;
       // 2 Level
       .cardImg {
@@ -101,6 +101,7 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 20px 15px;
+      flex-grow: 1;
       // gap: 10px;
       // 2 Level
       .date {

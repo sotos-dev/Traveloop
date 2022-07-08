@@ -1,0 +1,48 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/breakpoints";
+
+.aboutUsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+
+  // 1 Level
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $titleColor;
+  }
+  // 1 Level
+  .copy {
+    text-align: center;
+    color: $copyColor;
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+  }
+  // 1 Level
+  .linkWrapper {
+    // 2 Level
+    border: 1px solid $red;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    .link {
+      color: $red;
+      font-weight: 700;
+    }
+    .icon {
+      color: $red;
+      margin-top: 3px;
+      font-weight: 700;
+    }
+  }
+}

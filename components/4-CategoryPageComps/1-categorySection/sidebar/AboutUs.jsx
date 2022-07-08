@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import Authors from "../../../assets/images/author.png"
+import Authors from "../../../../assets/images/author.png"
 import styles from "./aboutUs.module.scss"
 import { BsArrowRight } from "react-icons/bs"
 
@@ -16,9 +16,11 @@ const AboutUs = () => {
           suscipit. Risus elit, dignissim nam nibh duis eu ut auctor viverra.
           Sollicitudin.
         </p>
-        <Link href='/' passHref>
+        <Link href='/about' passHref>
           <div className={styles.linkWrapper}>
-            <a className={styles.link}>Learn more about us</a>
+            <a className={styles.link}>
+              <span>Learn more about us</span>
+            </a>
             <BsArrowRight className={styles.icon} />
           </div>
         </Link>
