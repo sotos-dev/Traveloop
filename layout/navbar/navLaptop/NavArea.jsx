@@ -37,7 +37,7 @@ const NavArea = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/categories/stories' passHref>
+                  <Link href='/categories/travel-stories' passHref>
                     <a className={styles.categoryLink}> Stories</a>
                   </Link>
                 </li>

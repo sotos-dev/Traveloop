@@ -6,15 +6,15 @@ import AllCategories from "./AllCategories"
 import SearchArticles from "./SearchArticles"
 import { categories } from "../../../utils/HomepageUtils/index"
 
-const CategorySection = ({ postsList, category }) => {
+const CategorySection = ({ posts }) => {
   return (
     <>
       <section className={styles.moreArticlesSection}>
         <Container>
           <div className={styles.moreArticlesWrapper}>
-            {/* Articles + Pagination Area */}
+            {/* Articles */}
             <div className={styles.articles}>
-              <CategoryPost postsList={postsList} category={category} />
+              <CategoryPost posts={posts} />
             </div>
             {/* Sidebar Area */}
             <div className={styles.sidebar}>

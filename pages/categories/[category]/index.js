@@ -2,10 +2,10 @@ import { getDocs, collection, query, where } from "firebase/firestore"
 import { db } from "../../../firebase/firebase_config"
 import CategorySection from "../../../components/4-CategoryPageComps/1-categorySection"
 
-const CategoryPage = ({ postsList, category }) => {
+const CategoryPage = ({ posts }) => {
   return (
     <>
-      return <CategorySection postsList={postsList} category={category} />
+      <CategorySection posts={posts} />
     </>
   )
 }
@@ -14,24 +14,30 @@ export default CategoryPage
 
 // Static Props
 export const getServerSideProps = async ({ params }) => {
-  const category = params.category
-  // The Query
-  const q = query(collection(db, "categories"), where("url", "==", category))
-  // Run the Query
+  // Declare Variables
+  let category = []
+  let posts = []
+
+  // Query to find the Category
+  const q = query(
+    collection(db, "categories"),
+    where("url", "==", params.category)
+  )
+  // Run the Query and get the data
   const querySnapshot = await getDocs(q)
-  // What Category was Clicked on
-  const theCategory = querySnapshot.docs.map((doc) => {
-    return { id: doc.id, data: doc.data() }
-  })
-  // This returns a nested array that includes the posts
-  const postsList = theCategory.map((doc) => {
-    return doc.data.posts
-  })
+  // Save Category's data and id in an array and pass it as props
+  querySnapshot.docs.forEach((doc) =>
+    category.push({ id: doc.id, data: doc.data() })
+  )
+  // Get the Posts from the category
+  category.forEach((item) => posts.push(...item.data.posts))
+
+  // console.log(category)
+  console.log(posts)
 
   return {
     props: {
-      postsList: postsList,
-      category: category,
+      posts: posts,
     },
   }
 }
