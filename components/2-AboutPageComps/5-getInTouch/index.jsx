@@ -15,7 +15,7 @@ const GetInTouch = () => {
               Mi quis sem eu morbi. Faucibus sed condimentum at nibh nec tempor
               venenatis proin. Donec vestibulum, ornare amet enim, orci. ✈️ 😊
             </p>
-            <strong className={styles.email}>Hello@anywhereweroam.com</strong>
+            <strong className={styles.email}>hello@hello.com</strong>
           </div>
         </Container>
       </section>

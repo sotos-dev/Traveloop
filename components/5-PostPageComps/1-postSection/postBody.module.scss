@@ -42,12 +42,6 @@
   }
 }
 
-@media (min-width: $tablet) {
-  .postBodyWrapper {
-    grid-column: 1 / 10;
-  }
-}
-
 @media (min-width: $laptop) {
   .postBodyWrapper {
     grid-column: 1 / 9;

@@ -1,12 +1,9 @@
-import Image from "next/image"
 import Container from "../../../ui/container/Container"
 import styles from "./index.module.scss"
 import BigImage from "./BigImage"
-import { recentArticlesCardsData } from "../../../utils/HomepageUtils"
 import RecentArticlesCard from "./RecentArticlesCard"
-import Link from "next/link"
 
-const RecentArticlesSection = () => {
+const RecentArticlesSection = ({ recentPosts }) => {
   return (
     <>
       <section className={styles.recentArticlesSection}>
@@ -21,7 +18,7 @@ const RecentArticlesSection = () => {
                 <h2 className={styles.sectionTitle}>News & Stories</h2>
               </div>
               <div className={styles.cardLinks}>
-                {recentArticlesCardsData.map((card) => {
+                {recentPosts.map((card) => {
                   return <RecentArticlesCard key={card.title} card={card} />
                 })}
               </div>

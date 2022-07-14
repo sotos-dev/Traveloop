@@ -5,11 +5,17 @@ import styles from "./recentArticlesCard.module.scss"
 const RecentArticlesCard = ({ card }) => {
   return (
     <>
-      <Link href='/'>
+      <Link href={`/categories/${card.category}`}>
         <div className={styles.card}>
           {/* Card Image */}
-          <div className={styles.img}>
-            <Image src={card.img} alt={card.title} layout='responsive' />
+          <div className={styles.imgWrapper}>
+            <Image
+              src={card.heroImg}
+              alt={card.title}
+              layout='fill'
+              objectFit='cover'
+              className={styles.img}
+            />
             <p className={styles.category}>{card.category}</p>
           </div>
           {/* Card Content */}

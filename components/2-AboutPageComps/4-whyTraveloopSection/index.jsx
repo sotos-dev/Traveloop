@@ -17,7 +17,7 @@ const WhyTraveloop = () => {
               Mi quis sem eu morbi. Faucibus sed condimentum at nibh nec tempor
               venenatis proin. Donec vestibulum, ornare amet enim, orci. ✈️ 😊
             </p>
-            <Link href='/' passHref>
+            <Link href='/categories' passHref>
               <div className={styles.linkWrapper}>
                 <a className={styles.link}>Browse Travel Blogs</a>
                 <BsArrowRight className={styles.icon} />

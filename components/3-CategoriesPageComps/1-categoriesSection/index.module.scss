@@ -28,3 +28,24 @@
     }
   }
 }
+
+@media (min-width: $tablet) {
+  .travelTopicsSection {
+    .travelTopicsWrapper {
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        color: $titleColor;
+        margin-bottom: 10px;
+      }
+      .copy {
+        text-align: center;
+        color: $copyColor;
+        max-width: 600px;
+        margin: 0 auto 45px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import Logo from "../../../ui/logo/Logo"
 import styles from "./index.module.scss"
 import NavArea from "./NavArea"
-import SearchArea from "./SearchArea"
 import AuthArea from "./AuthArea"
 
 const NavLaptop = () => {
@@ -17,8 +16,6 @@ const NavLaptop = () => {
         </div>
         {/* Right Side Nav */}
         <div className={styles.flexSides}>
-          {/* 3 - Search Area */}
-          <SearchArea />
           {/* 4 - Auth Area */}
           <AuthArea />
         </div>

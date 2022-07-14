@@ -1,14 +1,13 @@
 @import "../../../../styles/colors";
 @import "../../../../styles/breakpoints";
 
-@media (min-width: $tablet) {
-  .sidebar {
-    grid-column: 10 / 13;
-  }
+.sidebar {
+  display: none;
 }
 
 @media (min-width: $laptop) {
   .sidebar {
-    // grid-column: 1 / 9;
+    display: block;
+    grid-column: 9 / 13;
   }
 }

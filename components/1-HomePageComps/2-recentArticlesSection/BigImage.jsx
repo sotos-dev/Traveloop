@@ -24,10 +24,10 @@ const BigImage = () => {
             It's Easy to do better sustainable travel
           </p>
           <div className={styles.bigImgCategoryArea}>
-            <Link href='/'>
+            <Link href='/categories/travel-inspiration'>
               <a className={styles.bigImgCategories}>Travel inspiration</a>
             </Link>
-            <Link href='/'>
+            <Link href='/categories/travel-stories'>
               <a className={styles.bigImgCategories}>Stories</a>
             </Link>
           </div>

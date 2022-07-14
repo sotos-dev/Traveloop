@@ -41,9 +41,11 @@ const AuthArea = () => {
       )}
       {currentUser && (
         <>
-          <button onClick={logUserOut} className={styles.registerLink}>
-            Logout
-          </button>
+          <div className={styles.authArea}>
+            <button onClick={logUserOut} className={styles.registerLink}>
+              Logout
+            </button>
+          </div>
         </>
       )}
     </>

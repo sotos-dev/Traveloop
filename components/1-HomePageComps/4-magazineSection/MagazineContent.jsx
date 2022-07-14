@@ -13,7 +13,7 @@ const MagazineContent = () => {
           aliquam faucibus purus tristique tellus dignissim sagittis amet,
           suscipit...
         </p>
-        <Link href='/' passHref>
+        <Link href='/categories' passHref>
           <div className={styles.linkWrapper}>
             <a className={styles.link}>Read posts</a>
             <BsArrowRight className={styles.icon} />

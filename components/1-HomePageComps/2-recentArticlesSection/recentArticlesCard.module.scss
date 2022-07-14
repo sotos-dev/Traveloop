@@ -9,14 +9,20 @@
   scroll-snap-align: center;
   scroll-snap-stop: always;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
+  position: relative;
   &:hover {
     box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
     transition: all 200ms;
   }
-  .img {
+  .imgWrapper {
     position: relative;
-    width: 100%;
+    min-height: 200px;
+    .img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
     // 2 Level
     .category {
       position: absolute;
@@ -55,12 +61,11 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
       transition: all 200ms;
     }
-    .img {
+    .imgWrapper {
       position: relative;
       width: 100%;
       // 2 Level
@@ -102,12 +107,11 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
       transition: all 200ms;
     }
-    .img {
+    .imgWrapper {
       position: relative;
       width: 100%;
       // 2 Level
@@ -149,12 +153,11 @@
     min-width: 250px;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
-    border-radius: 12px;
     &:hover {
       box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
       transition: all 200ms;
     }
-    .img {
+    .imgWrapper {
       position: relative;
       width: 100%;
       // 2 Level

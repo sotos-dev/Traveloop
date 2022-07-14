@@ -1,15 +1,18 @@
 import { collection, getDocs, query, where } from "firebase/firestore"
 import PostSection from "../../../../components/5-PostPageComps/1-postSection"
-import RelatedArticles from "../../../../components/5-PostPageComps/2-relatedArticlesSection"
 import { db } from "../../../../firebase/firebase_config"
 
-const PostPage = ({ post, posts, categories }) => {
+const PostPage = ({ post, posts, categories, categoryUrl, postUrl }) => {
   return (
     <>
       {/* Post Section with Sidebar */}
-      <PostSection post={post} posts={posts} categories={categories} />
-      {/* Related Articles */}
-      <RelatedArticles RelatedArticles={RelatedArticles} />
+      <PostSection
+        post={post}
+        posts={posts}
+        categories={categories}
+        categoryUrl={categoryUrl}
+        postUrl={postUrl}
+      />
     </>
   )
 }
@@ -17,48 +20,49 @@ const PostPage = ({ post, posts, categories }) => {
 export default PostPage
 
 export const getServerSideProps = async ({ params }) => {
+  console.log(params.category)
+
   // Initializations
-  let topics = []
-  // Get Categories
+  let travelCategories = []
+  let categoryResult = {}
+  // Get all the travel categories
   const categories = await getDocs(collection(db, "categories"))
   categories.forEach((category) => {
-    topics.push({
+    travelCategories.push({
       id: category.id,
       data: category.data(),
     })
   })
 
-  // Create Query to get a single Category
+  // Create query to get a single category based on the Next's params object - params.category where params is the url object and category is the name of the dynamic route/folder/file
   const q = query(
     collection(db, "categories"),
     where("url", "==", params.category)
   )
-  // Get the Category
+  // Run the above query
   const querySnapShot = await getDocs(q)
 
-  let categoryResult = {}
+  // Initializations to get one post from the category above
   let singlePost = {}
   let posts = []
-  // Get Category's Data
+  // Get ategory's data
   querySnapShot.forEach((doc) => {
     categoryResult = { ...doc.data() }
   })
-  // Get Particular Post
+  // Get a Particular Post using the params object again there is the slug property that's a field in every post in firestore
   categoryResult.posts.forEach((post) => {
     if (params.post === post.slug) {
       singlePost = post
     }
-    // Also get All Posts from this category
+    // Also get all posts from this category
     posts.push(post)
   })
-
-  console.log(topics)
 
   return {
     props: {
       post: singlePost,
       posts: posts,
-      categories: topics,
+      categories: travelCategories,
     },
   }
 }
