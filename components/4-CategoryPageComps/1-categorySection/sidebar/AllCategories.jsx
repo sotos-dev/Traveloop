@@ -1,4 +1,5 @@
 import Link from "next/link"
+import React from "react"
 import styles from "./allCategories.module.scss"
 
 const AllCategories = ({ categories }) => {
@@ -9,11 +10,11 @@ const AllCategories = ({ categories }) => {
         <div className={styles.categoriesWrapper}>
           {categories.map((category) => {
             return (
-              <Link href={`${category.data.url}`}>
-                <a key={category.id} className={styles.category}>
-                  {category.data.category}
-                </a>
-              </Link>
+              <React.Fragment key={category.id}>
+                <Link href={`${category.data.url}`}>
+                  <a className={styles.category}>{category.data.category}</a>
+                </Link>
+              </React.Fragment>
             )
           })}
         </div>

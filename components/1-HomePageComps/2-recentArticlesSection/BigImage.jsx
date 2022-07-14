@@ -21,7 +21,7 @@ const BigImage = () => {
         <div className={styles.bigImgContent}>
           <p className={styles.bigImgDate}>April 8, 2022</p>
           <p className={styles.bigImgTitle}>
-            It's Easy to do better sustainable travel
+            It is Easy to do better sustainable travel
           </p>
           <div className={styles.bigImgCategoryArea}>
             <Link href='/categories/travel-inspiration'>

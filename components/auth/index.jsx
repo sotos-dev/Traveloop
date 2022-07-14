@@ -108,7 +108,7 @@ const AuthUser = () => {
               </p>
             ) : (
               <p className={styles.underTitle}>
-                Don't have an account?
+                Don&apos;t have an account?
                 <span
                   onClick={() => setShowRegistrationForm(true)}
                   className={styles.underTitleSpans}>

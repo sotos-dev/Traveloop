@@ -9,7 +9,7 @@ const WhosNickCard = () => {
         <div className={styles.imgWrapper}>
           <Image src={Ellis} alt='Ellis' className={styles.img} />
         </div>
-        <p className={styles.title}>Who's Ellis?</p>
+        <p className={styles.title}>Who is Ellis?</p>
         <p className={styles.copy}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu habitasse
           at id euismod euismod. Faucibus imentum at nibh nec tempor venenatis
