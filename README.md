@@ -1,6 +1,6 @@
 ## Traveloop is a portfolio blog that showcases NextJS's dynamic routes and uses Firebase Auth and Firestore as a database.
 
-## https://this-traveloop.netlify.app/
+## https://traveloop.vercel.app/
 
 ## Functionality:
 
@@ -28,4 +28,4 @@ Back-end: Firebase Auth & Firebase Firestore
 
 Have fun with this here is the link!
 
-## https://this-traveloop.netlify.app/
+## https://traveloop.vercel.app/
