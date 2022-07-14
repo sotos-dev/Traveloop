@@ -15,6 +15,8 @@ const RecentArticlesCard = ({ card }) => {
               layout='fill'
               objectFit='cover'
               className={styles.img}
+              placeholder='blur'
+              blurDataURL={card.heroImg}
             />
             <p className={styles.category}>{card.category}</p>
           </div>

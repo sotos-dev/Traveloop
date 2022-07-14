@@ -14,6 +14,7 @@ const HeroSection = () => {
             layout='fill'
             objectFit='cover'
             priority
+            placeholder='blur'
           />
         </div>
         <h1 className={styles.title}>Welcome to Traveloop</h1>

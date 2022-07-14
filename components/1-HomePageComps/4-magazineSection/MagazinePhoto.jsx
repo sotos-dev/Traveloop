@@ -6,7 +6,12 @@ const MagazinePhoto = () => {
   return (
     <>
       <div className={styles.imgWrapper}>
-        <Image src={Magazine} alt='magazine' className={styles.img} />
+        <Image
+          src={Magazine}
+          alt='magazine'
+          className={styles.img}
+          placeholder='blur'
+        />
       </div>
     </>
   )

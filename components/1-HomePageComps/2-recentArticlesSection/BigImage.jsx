@@ -14,6 +14,7 @@ const BigImage = () => {
           layout='fill'
           objectFit='cover'
           className={styles.bigImg}
+          placeholder='blur'
         />
         <div className={styles.bigImgShader}></div>
 

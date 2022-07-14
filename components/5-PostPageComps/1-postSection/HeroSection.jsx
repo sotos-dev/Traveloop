@@ -21,6 +21,8 @@ const HeroSection = ({ post }) => {
             objectFit='cover'
             className={styles.img}
             priority
+            placeholder='blur'
+            blurDataURL={post.heroImg}
           />
         </div>
       </div>

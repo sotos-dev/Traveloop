@@ -20,6 +20,8 @@ const MoreArticlesCard = ({ categories }) => {
                     layout='fill'
                     objectFit='cover'
                     className={styles.cardImg}
+                    placeholder='blur'
+                    blurDataURL={category.data.img}
                   />
                   {/* Card Category */}
                   <p className={styles.cardCategory}>{category.data.name}</p>

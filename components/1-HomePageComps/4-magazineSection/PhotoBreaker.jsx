@@ -12,6 +12,7 @@ const PhotoSection = () => {
           layout='responsive'
           objectFit='cover'
           className={styles.img}
+          placeholder='blur'
         />
       </section>
     </>

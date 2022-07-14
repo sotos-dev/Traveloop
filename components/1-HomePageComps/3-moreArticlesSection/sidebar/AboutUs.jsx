@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <>
       <div className={styles.aboutUsWrapper}>
-        <Image src={Authors} alt='blog writers' />
+        <Image src={Authors} alt='blog writers' placeholder='blur' />
         <h3 className={styles.title}>About us</h3>
         <p className={styles.copy}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis

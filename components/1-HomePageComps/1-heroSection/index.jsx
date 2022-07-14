@@ -16,6 +16,7 @@ const HeroSection = () => {
             layout='fill'
             objectFit='cover'
             priority
+            placeholder='blur'
           />
         </div>
         {/* Content */}
