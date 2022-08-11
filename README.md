@@ -18,12 +18,12 @@ Back-end: Firebase Auth & Firebase Firestore
 
 ## Libraries/Packages:
 
-1. framer-motion -> for the auth modal
-2. sass -> because it rocks!
+1. framer-motion -> for animating the auth modal
+2. sass -> More flexible css handling
 3. react-hook-form -> for keeping the codebase leaner (as opposed to the recipie project where form data collection and validation is custom written)
 4. yup -> same as above
-5. react-icons -> great way to add icons in your app/site
-6. the-new-css-reset -> great css reset library and browser normalization
+5. react-icons -> add icons
+6. the-new-css-reset -> css reset library and browser normalization
 7. firebase -> for db and auth
 
 Have fun with this here is the link!
